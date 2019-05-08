@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Dmitriy Orlov](https://up.htmlacademy.ru/htmlcss/25/user/987967).
-* Наставник: Евгений Баранков.
+* Наставник: Евгений Баранков (https://up.htmlacademy.ru/htmlcss/25/user/518169).
 
 ---
 
