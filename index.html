@@ -4,40 +4,44 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
-    <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
     <div class="header-top">
-      <p class="logo header-logo"><a><img src="img/logo.svg" alt="Логотип «Техномарт»" width="108" height="18"></a></p>
-      <form action="" class="form-search"><label for="search" class="header-button">Поиск:</label><input type="text" id="search" name="search"></form>
-      <p class="header-top__menu">
+      <div class="wrapper">
+        <h1>Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</h1>
+        <a class="logo header-logo"><img src="img/logo.svg" alt="Логотип «Техномарт»" width="108" height="18"></a>
+        <form action="" class="form-search"><input class="search-text" type="text" id="search" name="search" placeholder="Поиск:"><input type="submit" class="button-search" value="Искать"></form>
         <a href="#" class="header-button button-bookmarks">Закладки: 0</a>
         <a href="#" class="header-button button-cart">Корзина: 0</a>
         <a href="#" class="header-button button-order">Оформить заказ</a>
-      </p>
+      </div>
     </div>
     <div class="header-middle">
-      <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a class="address-phone" href="tel:+78125550555">+7 (812) 555-05-55</a></p>
-      <!-- Переключение состояний (залогинен/вылогинен) блока .user-menu будет делаться с помощью класса .user-menu--loggedin -->
-      <div class="user-menu">
-        <!-- Блок, который виден в состоянии "юзер не залогинен" -->
-        <ul class="user-menu__login">
-          <li>
-            <a href="#" class="button-icon button-login">Войти</a>
-          </li>
-          <li>
-            <a href="#" class="button">Регистрация</a>
-          </li>
-        </ul>
-        <!-- Блок, который виден в состоянии "юзер залогинен" -->
-        <div class="user-menu__user">
-          <p><span class="button-icon button-username">Равшан Джамшутович</span><a href="#" class="icon">Выйти</a></p>
-          <ul class="user-menu__nav">
-            <li><a href="#">Мои заказы</a></li>
-            <li><a href="#">Личный кабинет</a></li>
+      <div class="wrapper">
+        <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a class="address-phone" href="tel:+78125550555">+7 (812) 555-05-55</a></p>
+        <!-- Переключение состояний (залогинен/вылогинен) блока .user-menu будет делаться с помощью класса .user-menu--loggedin -->
+        <div class="user-menu">
+          <!-- Блок, который виден в состоянии "юзер не залогинен" -->
+          <ul class="user-menu__login">
+            <li>
+              <a href="#" class="button-icon button-login">Войти</a>
+            </li>
+            <li>
+              <a href="#" class="button">Регистрация</a>
+            </li>
           </ul>
+          <!-- Блок, который виден в состоянии "юзер залогинен" -->
+          <div class="user-menu__user">
+            <p><span class="button-icon button-username">Равшан Джамшутович</span><a href="#" class="icon">Выйти</a></p>
+            <ul class="user-menu__nav">
+              <li><a href="#">Мои заказы</a></li>
+              <li><a href="#">Личный кабинет</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
