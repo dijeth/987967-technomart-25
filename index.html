@@ -20,41 +20,38 @@
         <a href="#" class="header-button button-order">Оформить заказ</a>
       </div>
     </div>
-    <div class="header-middle">
+    <!-- Переключение состояний (залогинен/вылогинен) блока .user-menu будет делаться с помощью классов .user-menu--login / .user-menu--logout -->
+    <div class="header-middle user-menu--login">
       <div class="wrapper">
-        <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a class="address-phone" href="tel:+78125550555">+7 (812) 555-05-55</a></p>
-        <!-- Переключение состояний (залогинен/вылогинен) блока .user-menu будет делаться с помощью класса .user-menu--loggedin -->
-        <div class="user-menu">
-          <!-- Блок, который виден в состоянии "юзер не залогинен" -->
-          <ul class="user-menu__login">
-            <li>
-              <a href="#" class="button-icon button-login">Войти</a>
-            </li>
-            <li>
-              <a href="#" class="button">Регистрация</a>
-            </li>
-          </ul>
-          <!-- Блок, который виден в состоянии "юзер залогинен" -->
-          <div class="user-menu__user">
-            <p><span class="button-icon button-username">Равшан Джамшутович</span><a href="#" class="icon">Выйти</a></p>
-            <ul class="user-menu__nav">
-              <li><a href="#">Мои заказы</a></li>
-              <li><a href="#">Личный кабинет</a></li>
-            </ul>
-          </div>
+        <p class="header-address"><span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
+        <!-- Блок, который виден в состоянии "юзер не залогинен" -->
+        <ul class="user-menu__signin">
+          <li>
+            <a href="#" class="button-icon button-login">Войти</a>
+          </li>
+          <li>
+            <a href="#" class="button-icon button-signup">Регистрация</a>
+          </li>
+        </ul>
+        <!-- Блок, который виден в состоянии "юзер залогинен" -->
+        <div class="user-menu__user">
+          <p class="user-menu__name"><a href="#" class="button-icon button-user">Равшан Джамшутович</a><a href="#" class="button-icon button-logout">Выйти</a></p>
+          <p class="user-menu__nav"><a href="#">Мои заказы</a>&emsp;&bull;&emsp;<a href="#">Личный кабинет</a></p>
         </div>
       </div>
     </div>
     <nav class="main-nav header-bottom">
-      <ul>
-        <li class="main-nav__item"><a>Главная</a></li>
-        <li class="main-nav__item"><a href="#">Компания</a></li>
-        <li class="main-nav__item"><a href="catalog.html">Каталог</a></li>
-        <li class="main-nav__item"><a href="#">Новости</a></li>
-        <li class="main-nav__item"><a href="#">Спецпредложения</a></li>
-        <li class="main-nav__item"><a href="#">Доставка</a></li>
-        <li class="main-nav__item"><a href="#">Контакты</a></li>
-      </ul>
+      <div class="wrapper">
+        <ul>
+          <li class="main-nav__item"><a>Главная</a></li>
+          <li class="main-nav__item"><a href="#">Компания</a></li>
+          <li class="main-nav__item"><a href="catalog.html">Каталог</a></li>
+          <li class="main-nav__item"><a href="#">Новости</a></li>
+          <li class="main-nav__item"><a href="#">Спецпредложения</a></li>
+          <li class="main-nav__item"><a href="#">Доставка</a></li>
+          <li class="main-nav__item"><a href="#">Контакты</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main class="main">
