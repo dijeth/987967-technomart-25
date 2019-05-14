@@ -445,31 +445,31 @@ h1 {
 
 .main-nav__item {
   flex-grow: 1;
-  padding: 20px 0 15px 0;
 
   text-align: center;
+}
+
+.main-nav__item a {
+  display: block;
+  padding: 20px 0 15px 0;
+
+  color: #ffffff;
+  text-decoration: none;
 
   border-bottom: 5px solid #293449;
 }
 
 
-.main-nav__item:hover {
+.main-nav__item a:hover {
   background-color: #293449;
 }
 
-.main-nav__item:active {
+.main-nav__item a:active {
   background-color: #1d2739;
   border-bottom: 5px solid #1d2739;
-}
-
-.main-nav__item:active a {
   color: #a8abaf;
 }
 
-.main-nav__item a {
-  color: #ffffff;
-  text-decoration: none;
-}
 
 .header-bottom .wrapper {
   background-color: #32425c;
