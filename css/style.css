@@ -4,7 +4,7 @@
   font-family: "Cuprum";
 
   src: url("../fonts/cuprum.woff") format("woff"),
-  url("../fonts/cuprum.woff2") format("woff2");
+    url("../fonts/cuprum.woff2") format("woff2");
 }
 
 @font-face {
@@ -13,7 +13,15 @@
   font-family: "Cuprum";
 
   src: url("../fonts/cuprumitalic.woff") format("woff"),
-  url("../fonts/cuprumitalic.woff2") format("woff2");
+    url("../fonts/cuprumitalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Cuprum";
+
+  src: url("../fonts/cuprumbold.woff") format("woff"),
+    url("../fonts/cuprumbold.woff2") format("woff2");
 }
 
 body {
@@ -23,6 +31,10 @@ body {
 .wrapper {
   width: 940px;
   margin: auto;
+}
+
+.visually-hidden {
+  display: none;
 }
 
 .header-top {
@@ -198,7 +210,7 @@ body {
   outline: none;
 }
 
-.search-text:focus ~ .button-search {
+.search-text:focus~.button-search {
   background-color: #ffffff;
   background-image: url(../img/sprite1.svg#search-red-view);
   opacity: 1;
@@ -281,6 +293,7 @@ h1 {
 
   font-style: italic;
   font-size: 16px;
+  font-weight: normal;
   line-height: 23px;
   color: #ee3643;
 }
@@ -465,9 +478,10 @@ h1 {
 }
 
 .main-nav__item a:active {
+  color: #a8abaf;
+
   background-color: #1d2739;
   border-bottom: 5px solid #1d2739;
-  color: #a8abaf;
 }
 
 
@@ -647,4 +661,43 @@ h1 {
 
 .instagram a {
   background-image: url(../img/sprite1.svg#ins-view);
+}
+
+.main-button {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  background-color: #ee3643;
+  border-radius: 3px;
+}
+
+.main-button:hover {
+  background-color: #ca2c37;
+}
+
+.main-button:active {
+  background-color: #ba2732;
+}
+
+.main-button--promo {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 115px;
+}
+
+.main-button--promo:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.main-button--promo:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
