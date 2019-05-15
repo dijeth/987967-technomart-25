@@ -1,23 +1,23 @@
 @font-face {
-  font-family: 'Cuprum';
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  font-family: "Cuprum";
 
-  src: url('../fonts/cuprum.woff') format('woff'),
-    url('../fonts/cuprum.woff2') format('woff2');
+  src: url("../fonts/cuprum.woff") format("woff"),
+  url("../fonts/cuprum.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Cuprum';
-  font-weight: 400;
   font-style: italic;
+  font-weight: 400;
+  font-family: "Cuprum";
 
-  src: url('../fonts/cuprumitalic.woff') format('woff'),
-    url('../fonts/cuprumitalic.woff2') format('woff2');
+  src: url("../fonts/cuprumitalic.woff") format("woff"),
+  url("../fonts/cuprumitalic.woff2") format("woff2");
 }
 
 body {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
 .wrapper {
@@ -35,31 +35,28 @@ body {
   position: relative;
 
   display: flex;
-
   justify-content: space-between;
 }
 
 .logo {
   display: flex;
-
+  justify-content: center;
+  align-items: center;
   width: 220px;
   height: 42px;
 
-  border-bottom: 5px solid #b52933;
   background-color: #ee3643;
-
-  justify-content: center;
-  align-items: center;
+  border-bottom: 5px solid #b52933;
 }
 
 .logo:hover {
-  border-bottom-color: #9a212a;
   background-color: #ca2c37;
+  border-bottom-color: #9a212a;
 }
 
 .logo:active {
-  border-bottom-color: #8e1e26;
   background-color: #ba2732;
+  border-bottom-color: #8e1e26;
 }
 
 .logo img {
@@ -71,18 +68,15 @@ body {
 }
 
 .header-button {
-  font-size: 18px;
-
   position: relative;
 
   display: inline-block;
-
   height: 18px;
   padding: 11px 30px 13px 40px;
 
+  font-size: 18px;
+  color: #ffffff;
   text-decoration: none;
-
-  color: #fff;
 }
 
 .header-button:hover {
@@ -91,10 +85,12 @@ body {
 
 .header-button:active {
   color: #5e626b;
+
   background-color: #161d29;
 }
 
 .header-button::before {
+  content: "";
   position: absolute;
   top: 50%;
   left: 0;
@@ -102,14 +98,12 @@ body {
   width: 40px;
   height: 42px;
 
-  content: '';
-  transform: translateY(-50%);
-
-  opacity: .3;
   background-image: url(../img/sprite1.svg#search-view);
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
+  transform: translateY(-50%);
+  opacity: 0.3;
 }
 
 .header-button:hover::before {
@@ -117,7 +111,7 @@ body {
 }
 
 .header-button:active::before {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .button-bookmarks::before {
@@ -149,16 +143,15 @@ body {
 
 .button-order:active {
   color: #a2be93;
+
   background-color: #518534;
 }
 
 .form-search {
   display: flex;
-  flex-direction: row-reverse;
-
-  height: 42px;
-
   flex-grow: 1;
+  flex-direction: row-reverse;
+  height: 42px;
 }
 
 .form-search:hover {
@@ -170,42 +163,42 @@ body {
 }
 
 .button-search {
-  font-size: 0;
-
   width: 50px;
   height: 42px;
   margin: 0;
   padding: 0;
 
-  opacity: .3;
-  border: 0;
+  font-size: 0;
+
   background-color: transparent;
   background-image: url(../img/sprite1.svg#search-view);
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
+  border: 0;
+  opacity: 0.3;
 }
 
 .search-text {
-  font-family: 'Cuprum', Arial, sans-serif;
-  font-size: 18px;
-
-  color: #fff;
-  border: 0;
-  background-color: transparent;
-
   flex-grow: 1;
+
+  font-size: 18px;
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #ffffff;
+
+  background-color: transparent;
+  border: 0;
 }
 
 .search-text:focus {
+  background-color: #ffffff;
   outline: none;
-  background-color: #fff;
 }
 
-.search-text:focus~.button-search {
-  opacity: 1;
-  background-color: #fff;
+.search-text:focus ~ .button-search {
+  background-color: #ffffff;
   background-image: url(../img/sprite1.svg#search-red-view);
+  opacity: 1;
 }
 
 .header-middle {
@@ -217,12 +210,9 @@ body {
 
 .header-middle .wrapper {
   display: flex;
-
-  width: 620px;
-  padding-left: 320px;
-
   justify-content: space-between;
   align-items: flex-start;
+  width: 940px;
 }
 
 .header-middle.user-menu--logout .user-menu__user {
@@ -234,14 +224,12 @@ body {
 }
 
 .header-address {
-  font-size: 14px;
-  line-height: 30px;
-
   display: flex;
   flex-direction: column-reverse;
-
   margin: 0;
 
+  font-size: 14px;
+  line-height: 30px;
   color: #32425c;
 }
 
@@ -251,20 +239,20 @@ body {
 }
 
 .header-address a {
-  font-size: 21px;
-  line-height: 21px;
-
   position: relative;
 
   padding: 10px 0 9px 65px;
 
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
   text-decoration: none;
 
-  color: #ee3643;
-  border: 3px solid #fff;
+  border: 3px solid #ffffff;
 }
 
 .header-address a::before {
+  content: "";
   position: absolute;
   top: 50%;
   left: 0;
@@ -272,43 +260,38 @@ body {
   width: 45px;
   height: 40px;
 
-  content: '';
-  transform: translateY(-50%);
-
-  opacity: .3;
   background-image: url(../img/sprite1.svg#phone-view);
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
+  transform: translateY(-50%);
+  opacity: 0.3;
 }
 
 h1 {
-  font-size: 16px;
-  font-style: italic;
-  line-height: 23px;
-
-  position: absolute;
-  top: 80px;
-  left: 55px;
-
   width: 200px;
+  margin: 0;
+  padding-left: 50px;
 
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
   color: #ee3643;
 }
 
 .button-icon {
-  font-size: 21px;
-  line-height: 21px;
-
   position: relative;
 
   padding: 10px 25px 9px 50px;
 
+  font-size: 21px;
+  line-height: 21px;
+  color: #32425c;
   text-decoration: none;
 
-  color: #32425c;
-  border: 3px solid #fff;
-  background-color: #fff;
+  background-color: #ffffff;
+  border: 3px solid #ffffff;
 }
 
 .button-icon:hover {
@@ -320,6 +303,7 @@ h1 {
 }
 
 .button-icon::before {
+  content: "";
   position: absolute;
   top: 50%;
   left: 0;
@@ -327,14 +311,12 @@ h1 {
   width: 45px;
   height: 40px;
 
-  content: '';
-  transform: translateY(-50%);
-
-  opacity: .3;
   background-image: url(../img/sprite1.svg#login-view);
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
+  transform: translateY(-50%);
+  opacity: 0.3;
 }
 
 .button-icon:hover::before {
@@ -342,7 +324,7 @@ h1 {
 }
 
 .button-icon:active::before {
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .button-login {
@@ -375,10 +357,9 @@ h1 {
 
 .button-logout {
   display: block;
-  overflow: hidden;
-
   width: 0;
   padding-right: 0;
+  overflow: hidden;
 }
 
 .button-logout::before {
@@ -393,7 +374,6 @@ h1 {
 
 .user-menu__name {
   display: flex;
-
   margin: 0;
   padding: 0;
 }
@@ -410,7 +390,6 @@ h1 {
 .user-menu__nav {
   font-size: 16px;
   line-height: 30px;
-
   color: #32425c;
 }
 
@@ -431,7 +410,6 @@ h1 {
 
 .main-nav ul {
   display: flex;
-
   margin: 0;
   padding: 0 20px;
 
@@ -439,11 +417,10 @@ h1 {
 }
 
 .main-nav__item {
+  flex-grow: 1;
   padding: 20px 0;
 
   text-align: center;
-
-  flex-grow: 1;
 }
 
 .main-nav__item:hover {
@@ -459,9 +436,8 @@ h1 {
 }
 
 .main-nav__item a {
+  color: #ffffff;
   text-decoration: none;
-
-  color: #fff;
 }
 
 .header-bottom .wrapper {
