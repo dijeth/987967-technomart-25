@@ -52,46 +52,46 @@
   transform: translateY(-50%);
 }
 
-.promo__item_1::before {
+.promo__item--1::before {
   background-image: url(../img/sprite1.svg#icon1-view);
 }
 
-.promo__item_2::before {
+.promo__item--2::before {
   background-image: url(../img/sprite1.svg#icon5-view);
 }
 
-.promo__item_3::before {
+.promo__item--3::before {
   right: 6px;
 
   background-image: url(../img/sprite1.svg#icon2-view);
 }
 
-.promo__item_5::before {
+.promo__item--5::before {
   right: 10px;
 
   background-image: url(../img/sprite1.svg#icon3-view);
 }
 
-.promo__item_6::before {
+.promo__item--6::before {
   right: 6px;
 
   background-image: url(../img/sprite1.svg#icon4-view);
 }
 
 
-.promo__item_2 {
+.promo__item--2 {
   background-color: #3bbce3;
 }
 
-.promo__item_3 {
+.promo__item--3 {
   background-color: #dc91d8;
 }
 
-.promo__item_5 {
+.promo__item--5 {
   background-color: #8ed78f;
 }
 
-.promo__item_6 {
+.promo__item--6 {
   /*background-color: #fff;*/
 }
 
