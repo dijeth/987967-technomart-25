@@ -4,7 +4,7 @@
   font-family: "Cuprum";
 
   src: url("../fonts/cuprum.woff") format("woff"),
-  url("../fonts/cuprum.woff2") format("woff2");
+    url("../fonts/cuprum.woff2") format("woff2");
 }
 
 @font-face {
@@ -697,4 +697,41 @@ h1 {
 
 .main-button--promo:active {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.main-text {
+  margin: 0;
+}
+
+.tool-info {
+  background-color: #f2f6f8;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.tool-info h3 {
+  margin: 0;
+}
+
+.main-header {
+  position: relative;
+
+  padding: 30px;
+  margin-top: 0;
+
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1;
+  color: #32425c;
+  text-transform: uppercase;
+
+  background-color: #f9f5f0;
+}
+
+.main-header a {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 233px;
 }

@@ -255,25 +255,13 @@
   transform: translateY(-50%);
 }
 
-.main-header {
-  position: relative;
-
-  padding: 30px;
-  margin-top: 0;
-
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 1;
-  color: #32425c;
-  text-transform: uppercase;
-
-  background-color: #f9f5f0;
+#slide1:checked ~ .slider-button__prev {
+  display: none;
 }
 
-.main-header a {
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 233px;
+
+
+#slide2:checked ~ .slider-button__next {
+  display: none;
 }
+
