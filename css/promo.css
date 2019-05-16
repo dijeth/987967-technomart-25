@@ -52,47 +52,47 @@
   transform: translateY(-50%);
 }
 
-.promo__item--1::before {
+.promo__item--paint::before {
   background-image: url(../img/sprite1.svg#icon1-view);
 }
 
-.promo__item--2::before {
+.promo__item--screwdriver::before {
   background-image: url(../img/sprite1.svg#icon5-view);
 }
 
-.promo__item--3::before {
+.promo__item--tractor::before {
   right: 6px;
 
   background-image: url(../img/sprite1.svg#icon2-view);
 }
 
-.promo__item--5::before {
+.promo__item--cart::before {
   right: 10px;
 
   background-image: url(../img/sprite1.svg#icon3-view);
 }
 
-.promo__item--6::before {
+.promo__item--car::before {
   right: 6px;
 
   background-image: url(../img/sprite1.svg#icon4-view);
 }
 
 
-.promo__item--2 {
+.promo__item--yellow {
+  background-color: #ffbf47;
+}
+
+.promo__item--blue {
   background-color: #3bbce3;
 }
 
-.promo__item--3 {
+.promo__item--pink {
   background-color: #dc91d8;
 }
 
-.promo__item--5 {
+.promo__item--green {
   background-color: #8ed78f;
-}
-
-.promo__item--6 {
-  /*background-color: #fff;*/
 }
 
 .promo-slider {
