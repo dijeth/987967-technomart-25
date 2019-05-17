@@ -4,7 +4,7 @@
   font-family: "Cuprum";
 
   src: url("../fonts/cuprum.woff") format("woff"),
-    url("../fonts/cuprum.woff2") format("woff2");
+  url("../fonts/cuprum.woff2") format("woff2");
 }
 
 @font-face {
@@ -13,7 +13,7 @@
   font-family: "Cuprum";
 
   src: url("../fonts/cuprumitalic.woff") format("woff"),
-    url("../fonts/cuprumitalic.woff2") format("woff2");
+  url("../fonts/cuprumitalic.woff2") format("woff2");
 }
 
 @font-face {
@@ -21,7 +21,7 @@
   font-family: "Cuprum";
 
   src: url("../fonts/cuprumbold.woff") format("woff"),
-    url("../fonts/cuprumbold.woff2") format("woff2");
+  url("../fonts/cuprumbold.woff2") format("woff2");
 }
 
 @font-face {
@@ -30,7 +30,7 @@
   font-family: "PTSans";
 
   src: url("../fonts/ptsans.woff") format("woff"),
-    url("../fonts/ptsans.woff2") format("woff2");
+  url("../fonts/ptsans.woff2") format("woff2");
 }
 
 @font-face {
@@ -39,7 +39,7 @@
   font-family: "PTSans";
 
   src: url("../fonts/ptsansbold.woff") format("woff"),
-    url("../fonts/ptsansbold.woff2") format("woff2");
+  url("../fonts/ptsansbold.woff2") format("woff2");
 }
 
 body {
@@ -53,13 +53,16 @@ body {
 
 .visually-hidden {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
-  clip: rect(0 0 0 0);
   overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
 }
 
 .header-top {
@@ -235,7 +238,7 @@ body {
   outline: none;
 }
 
-.search-text:focus~.button-search {
+.search-text:focus ~ .button-search {
   background-color: #ffffff;
   background-image: url(../img/sprite1.svg#search-red-view);
   opacity: 1;
@@ -511,6 +514,11 @@ h1 {
   background-color: #32425c;
 }
 
+footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-top,
 .footer-middle {
   background-color: #32425c;
@@ -529,17 +537,8 @@ h1 {
   background-color: #293449;
 }
 
-.footer-bottom .wrapper {
-  font-size: 0;
-}
-
-.footer-top .wrapper::after,
-.footer-middle .wrapper::after {
-  clear: both;
-}
-
 .footer-nav {
-  float: right;
+  display: flex;
   margin: 0;
   padding: 0;
   padding-top: 40px;
@@ -551,13 +550,8 @@ h1 {
   padding-top: 30px;
 }
 
-.footer-nav::after {
-  clear: both;
-}
-
 .footer-nav-item {
   display: block;
-  float: left;
   padding: 0 30px;
 }
 
@@ -585,8 +579,9 @@ h1 {
 }
 
 .footer-logo {
-  display: inline-flex;
+  display: flex;
   height: 63px;
+  margin-right: auto;
 }
 
 .footer-logo img {
@@ -595,8 +590,8 @@ h1 {
 }
 
 .footer-address {
-  display: inline-block;
   margin: 0;
+  margin-right: auto;
   padding-top: 30px;
 
   font-size: 18px;
@@ -609,6 +604,10 @@ h1 {
   text-decoration: none;
 }
 
+.footer-address a:hover {
+  text-decoration: underline;
+}
+
 .footer-text {
   float: right;
   margin: 0;
@@ -618,6 +617,10 @@ h1 {
   line-height: 18px;
   text-align: left;
   color: #ffffff;
+}
+
+.footer-contacts {
+  margin-left: 135px;
 }
 
 .footer-develop {
@@ -638,18 +641,12 @@ h1 {
   text-decoration: none;
 }
 
-.footer-copyright {
-  float: left;
-}
-
 .socials {
-  display: inline-block;
   margin: 0;
   padding: 0;
-  padding-left: 25px;
+  margin-left: auto;
 
   list-style: none;
-  font-size: 0;
 }
 
 .socials li {
@@ -815,26 +812,31 @@ h1 {
 
 .about__partners {
   margin: 0;
-  padding: 0;
   margin-bottom: 35px;
+  padding: 0;
+
   list-style: none;
 }
 
 .about__partners li {
+  position: relative;
+
+  margin-bottom: 10px;
+  padding-left: 35px;
+
   font-size: 18px;
   line-height: 24px;
-  padding-left: 35px;
-  margin-bottom: 10px;
-  position: relative;
 }
 
 .about__partners li:before {
   content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+
   width: 28px;
   height: 2px;
+
   background-color: #ee3643;
-  position: absolute;
-  left: 0;
-  top: 50%;
   transform: translateY(-50%);
 }
