@@ -1,0 +1,136 @@
+.service {
+  padding-top: 50px;
+
+  background-color: #f4f7f9;
+}
+
+.service h2 {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.service-toggle {
+  display: none;
+}
+
+.service__controls {
+  float: left;
+  margin: 0;
+  margin-top: 25px;
+  padding: 0;
+  width: 240px;
+
+  list-style: none;
+  position: relative;
+}
+
+.service__controls::after {
+content: "";
+display: block;
+width: 10px;
+height: 280px;
+right: 0;
+top: 50%;
+transform: translateY(-50%);
+background-image: url(../img/service-shadow.png);
+position: absolute;
+}
+
+.service__slider {
+  margin: 0;
+  margin-top: 45px;
+  padding: 0;
+  margin-left: 320px;
+  height: 287px;
+  overflow: hidden;
+}
+
+.slide-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.service h3 {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 1;
+  color: #32425c;
+  text-transform: uppercase;
+}
+
+.control-list__item {
+  display: block;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 1;
+  padding: 20px;
+  margin-bottom: 1px;
+  background-color: #32425c;
+  color: #ffffff;
+  border-bottom: 1px solid #2b364a;
+  box-shadow: 0 1px 0px 0px #405069;
+}
+
+.control-list__item:hover {
+  background-color: #293449;
+}
+
+#service-delivery:checked ~ .control-list .control-list__item[for="service-delivery"],
+#service-warranty:checked ~ .control-list .control-list__item[for="service-warranty"],
+#service-credit:checked ~ .control-list .control-list__item[for="service-credit"] {
+  background-color: #ffffff;
+  color: #32425c;
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.slide-list__item {
+  height: 287px;
+  background-size: contain;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  padding-right: 320px;
+}
+
+.slide-list__item--delivery {
+  background-image: url(../img/delivery.jpg);
+}
+
+.slide-list__item--warranty {
+  background-image: url(../img/warranty.jpg);
+}
+
+.slide-list__item--credit {
+  background-image: url(../img/credit.jpg);
+}
+
+.service .main-button {
+  width: 175px;
+}
+
+#service-delivery:checked ~ .service__slider .slide-list {
+  transform: translateY(0);
+}
+
+
+#service-warranty:checked ~ .service__slider .slide-list {
+  transform: translateY(-33%);
+}
+
+
+#service-credit:checked ~ .service__slider .slide-list {
+  transform: translateY(-66%);
+}

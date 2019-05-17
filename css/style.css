@@ -24,6 +24,24 @@
     url("../fonts/cuprumbold.woff2") format("woff2");
 }
 
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "PTSans";
+
+  src: url("../fonts/ptsans.woff") format("woff"),
+    url("../fonts/ptsans.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: bold;
+  font-family: "PTSans";
+
+  src: url("../fonts/ptsansbold.woff") format("woff"),
+    url("../fonts/ptsansbold.woff2") format("woff2");
+}
+
 body {
   font-family: "Cuprum", Arial, sans-serif;
 }
@@ -34,7 +52,14 @@ body {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .header-top {
@@ -663,16 +688,16 @@ h1 {
 .main-button {
   display: inline-block;
   padding-top: 10px;
+  padding-right: 10px;
   padding-bottom: 9px;
   padding-left: 10px;
-  padding-right: 10px;
 
   font-size: 14px;
   line-height: 18px;
+  text-align: center;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
 
   background-color: #ee3643;
   border-radius: 3px;
@@ -687,8 +712,9 @@ h1 {
 }
 
 .main-button--promo {
-  background-color: rgba(0, 0, 0, 0.1);
   width: 115px;
+
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .main-button--promo:hover {
@@ -704,9 +730,10 @@ h1 {
 }
 
 .tool-info {
-  background-color: #f2f6f8;
   padding-top: 50px;
   padding-bottom: 50px;
+
+  background-color: #f2f6f8;
 }
 
 .tool-info h3 {
@@ -716,8 +743,8 @@ h1 {
 .main-header {
   position: relative;
 
-  padding: 30px;
   margin-top: 0;
+  padding: 30px;
 
   font-weight: normal;
   font-size: 30px;
@@ -730,8 +757,84 @@ h1 {
 
 .main-header a {
   position: absolute;
+  top: 50%;
   right: 30px;
+
+  width: 233px;
+
+  transform: translateY(-50%);
+}
+
+.main-text {
+  margin-bottom: 20px;
+
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PTSans", Arial, sans-serif;
+  color: #000000;
+}
+
+.about h3 {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.about__info {
+  float: left;
+  width: 520px;
+}
+
+.about__info .main-button {
+  width: 200px;
+}
+
+.about__contacts .main-button {
+  width: 280px;
+}
+
+.about__contacts {
+  margin-left: 640px;
+}
+
+.about .wrapper {
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+
+.about__map {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.about__partners {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 35px;
+  list-style: none;
+}
+
+.about__partners li {
+  font-size: 18px;
+  line-height: 24px;
+  padding-left: 35px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.about__partners li:before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background-color: #ee3643;
+  position: absolute;
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 233px;
 }
