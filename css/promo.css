@@ -4,13 +4,8 @@
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 20px;
-}
-
-.promo::after {
-  content: "";
-
-  display: block;
-  clear: both;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .promo h3 {
@@ -26,7 +21,6 @@
 .promo__item {
   position: relative;
 
-  float: left;
   width: 150px;
   margin-right: 20px;
   margin-bottom: 20px;
