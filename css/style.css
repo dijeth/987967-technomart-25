@@ -253,9 +253,9 @@ body {
 
 .header-middle .wrapper {
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   align-items: flex-start;
-  width: 940px;
+  /*width: 940px;*/
 }
 
 .header-middle.user-menu--logout .user-menu__user {
@@ -270,6 +270,7 @@ body {
   display: flex;
   flex-direction: column-reverse;
   margin: 0;
+  margin-right: auto;
 
   font-size: 14px;
   line-height: 30px;
@@ -314,6 +315,7 @@ body {
 h1 {
   width: 200px;
   margin: 0;
+  margin-right: 60px;
   padding-left: 50px;
 
   font-style: italic;
