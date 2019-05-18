@@ -4,7 +4,7 @@
   font-family: "Cuprum";
 
   src: url("../fonts/cuprum.woff") format("woff"),
-    url("../fonts/cuprum.woff2") format("woff2");
+  url("../fonts/cuprum.woff2") format("woff2");
 }
 
 @font-face {
@@ -13,7 +13,7 @@
   font-family: "Cuprum";
 
   src: url("../fonts/cuprumitalic.woff") format("woff"),
-    url("../fonts/cuprumitalic.woff2") format("woff2");
+  url("../fonts/cuprumitalic.woff2") format("woff2");
 }
 
 @font-face {
@@ -21,7 +21,7 @@
   font-family: "Cuprum";
 
   src: url("../fonts/cuprumbold.woff") format("woff"),
-    url("../fonts/cuprumbold.woff2") format("woff2");
+  url("../fonts/cuprumbold.woff2") format("woff2");
 }
 
 @font-face {
@@ -30,7 +30,7 @@
   font-family: "PTSans";
 
   src: url("../fonts/ptsans.woff") format("woff"),
-    url("../fonts/ptsans.woff2") format("woff2");
+  url("../fonts/ptsans.woff2") format("woff2");
 }
 
 @font-face {
@@ -39,7 +39,7 @@
   font-family: "PTSans";
 
   src: url("../fonts/ptsansbold.woff") format("woff"),
-    url("../fonts/ptsansbold.woff2") format("woff2");
+  url("../fonts/ptsansbold.woff2") format("woff2");
 }
 
 body {
@@ -238,7 +238,7 @@ body {
   outline: none;
 }
 
-.search-text:focus~.button-search {
+.search-text:focus ~ .button-search {
   background-color: #ffffff;
   background-image: url(../img/sprite1.svg#search-red-view);
   opacity: 1;
@@ -703,10 +703,12 @@ footer .wrapper {
 
 .main-button:hover {
   background-color: #ca2c37;
+  outline: none;
 }
 
 .main-button:active {
   background-color: #ba2732;
+  outline: none;
 }
 
 .main-button--promo {
@@ -717,10 +719,28 @@ footer .wrapper {
 
 .main-button--promo:hover {
   background-color: rgba(0, 0, 0, 0.2);
+  outline: none;
 }
 
 .main-button--promo:active {
   background-color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.main-button--white {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.main-button--white:hover {
+  background-color: #e1e1e1;
+  outline: none;
+}
+
+.main-button--white:active {
+  background-color: #d1d1d1;
+  outline: none;
 }
 
 .main-text {
@@ -852,7 +872,7 @@ footer .wrapper {
   padding: 20px;
 }
 
-.write-us {
+.dialog {
   position: relative;
 
   width: 620px;
@@ -895,35 +915,38 @@ footer .wrapper {
   border-radius: 5px;
 }
 
-.write-us__contacts {
+.dialog__text {
   display: flex;
+  margin-right: 80px;
+  margin-left: 80px;
 }
 
-.write-us__contacts p {
+.dialog__text p {
   flex-grow: 1;
+  margin: 0;
+}
+
+.write-us__contacts {
+  margin-bottom: 20px;
 }
 
 .write-us__contacts p:last-child {
   padding-left: 20px;
 }
 
-.write-us__field {
-  margin-right: 80px;
-  margin-left: 80px;
-}
-
-.write-us__controls {
+.dialog__controls {
   margin-top: 37px;
   padding: 37px 80px;
 
   background-color: #f4f4f4;
 }
 
-.write-us__controls .main-button {
+.write-us .main-button {
   width: 100%;
 }
 
-.button-close {
+.map-popup__close-button,
+.dialog__close-button {
   position: absolute;
   top: 9px;
   right: 9px;
@@ -940,7 +963,8 @@ footer .wrapper {
 
 .map-popup {
   position: relative;
-  box-shadow: 0 0 16px 0px rgba(47, 42, 43, 0.5);
+
+  box-shadow: 0 0 16px 0 rgba(47, 42, 43, 0.5);
 }
 
 .map-popup img {
@@ -948,44 +972,48 @@ footer .wrapper {
 }
 
 .breadcrumbs {
-  margin: 0;
-  padding: 22px 0;
-  list-style: none;
   display: flex;
   justify-content: flex-start;
+  margin: 0;
+  padding: 22px 0;
+
+  list-style: none;
 }
 
 .breadcrumbs,
 .breadcrumbs a {
-  font-family: "PTSans", Arial, sans-serif;
   font-size: 13px;
   line-height: 1;
-  text-transform: uppercase;
+  font-family: "PTSans", Arial, sans-serif;
   color: #000000;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
 .breadcrumbs__item {
-  margin-right: 45px;
   position: relative;
+
+  margin-right: 45px;
 }
 
 .breadcrumbs__item--home a {
   display: inline-block;
   width: 14px;
   height: 13px;
+
   vertical-align: top;
 
   background-color: transparent;
   background-image: url(../img/sprite1.svg#home-view);
+  background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .breadcrumbs__item a:focus,
 .breadcrumbs__item a:hover {
   text-decoration: underline;
+
   outline: none;
 }
 
@@ -998,12 +1026,45 @@ footer .wrapper {
 .breadcrumbs__item a::after {
   content: "";
   position: absolute;
+  right: -25px;
+
   width: 7px;
   height: 12px;
-  right: -25px;
+
   background: transparent url(../img/sprite1.svg#right-small-view) 50% / cover no-repeat;
 }
 
 .tools .main-header {
   background-color: #f2f6f8;
+}
+
+.cart-plus__text p {
+  position: relative;
+
+  padding: 20px 0 20px 96px;
+
+  font-size: 30px;
+  line-height: 1;
+}
+
+.cart-plus__text p::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 66px;
+  height: 66px;
+
+  background: transparent url(../img/sprite1.svg#v-view) 50% / cover no-repeat;
+  transform: translateY(-50%);
+}
+
+.cart-plus__controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-plus__controls .main-button {
+  width: calc(50% - 10px);
 }

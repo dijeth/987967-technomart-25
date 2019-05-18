@@ -103,26 +103,28 @@
     </section>
     <section class="modal modal--write-us">
       <h2 class="visually-hidden">Форма авторизации</h2>
-      <form class="write-us" action="https://echo.htmlacademy.ru" method="post">
-        <div class="write-us__contacts write-us__field">
+      <form class="write-us dialog" action="https://echo.htmlacademy.ru" method="post">
+        <div class="write-us__contacts dialog__text">
           <p><label for="write-us-name">Ваше имя:</label><input type="text" placeholder="Имя Фамилия" name="name" id="write-us-name">
           </p>
           <p>
             <label for="write-us-email">Ваш e-mail:</label><input type="email" placeholder="email@example.com" name="email" id="write-us-email" required>
           </p>
         </div>
-        <p class="write-us__field">
-          <label for="write-us-text">Текст письма:</label><textarea placeholder="В свободной форме" name="text" id="write-us-text" cols="30" rows="6" required></textarea>
-        </p>
-        <div class="write-us__controls">
+        <div class="dialog__text">
+          <p>
+            <label for="write-us-text">Текст письма:</label><textarea placeholder="В свободной форме" name="text" id="write-us-text" cols="30" rows="6" required></textarea>
+          </p>
+        </div>
+        <div class="write-us__controls dialog__controls">
           <button type="submit" class="main-button">Отправить</button>
-          <button type="button" class="write-us__close button-close" aria-label="Закрыть"></button>
+          <button type="button" class="dialog__close-button" aria-label="Закрыть"></button>
         </div>
       </form>
     </section>
     <section class="modal modal--map">
       <h2 class="visually-hidden">Подробная карта проезда</h2>
-      <div class="map-popup"><img src="img/map-popup.png" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="940" height="446"><button class="button-close"type="button" aria-label="Закрыть"></button></div>
+      <div class="map-popup"><img src="img/map-popup.png" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="940" height="446"><button class="map-popup__close-button" type="button" aria-label="Закрыть"></button></div>
     </section>
   </main>
   <footer>
@@ -158,7 +160,7 @@
           <li class="instagram"><a href="#" aria-label="Техномарт в инстаграме"></a></li>
         </ul>
         <p class="footer-text footer-contacts">Обратная связь:<br><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-        <p class="footer-text footer-develop">Разработано&nbsp;&mdash;<br><a href="http://www.htmlacademy.ru">htmlacademy.ru</a></p>
+        <p class="footer-text footer-develop">Разработано&nbsp;&mdash;<br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
       </div>
     </div>
   </footer>
