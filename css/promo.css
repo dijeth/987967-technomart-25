@@ -120,8 +120,8 @@
   top: 50%;
   z-index: 1;
 
-  width: 70px;
-  height: 120px;
+  width: 22px;
+  height: 40px;
 
   color: transparent;
 
@@ -135,11 +135,11 @@
 }
 
 .slider-button__prev {
-  left: 0;
+  left: 25px;
 }
 
 .slider-button__next {
-  right: 0;
+  right: 25px;
 
   background-image: url(../img/sprite1.svg#arrow-right-view);
 }

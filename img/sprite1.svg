@@ -40,8 +40,8 @@
   <view id="icon3-view" viewBox="80 42 40 42" />
   <view id="icon4-view" viewBox="120 42 40 42" />
   <view id="icon5-view" viewBox="160 42 40 42" />
-  <view id="arrow-left-view" viewBox="200 42 40 42" />
-  <view id="arrow-right-view" viewBox="240 42 40 42" />
+  <view id="arrow-left-view" viewBox="217 57 7 13" />
+  <view id="arrow-right-view" viewBox="257 57 7 13" />
   <view id="vk-view" viewBox="280 42 40 42" />
   <view id="fb-view" viewBox="0 84 40 42" />
   <view id="ins-view" viewBox="40 84 40 42" />
