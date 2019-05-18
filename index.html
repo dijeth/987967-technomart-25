@@ -14,7 +14,7 @@
     <div class="header-top">
       <div class="wrapper">
         <a class="logo header-logo"><img src="img/logo.svg" alt="Логотип «Техномарт»" width="108" height="18"></a>
-        <form action="" class="form-search" method="get"><label for="search" class="visually-hidden">Поиск по сайту</label><input class="search-text" type="search" id="search" name="search" placeholder="Поиск:"><button type="submit" class="button-search">Искать</button></form>
+        <form action="https://echo.htmlacademy.ru" class="form-search" method="get"><label for="search" class="visually-hidden">Поиск по сайту</label><input class="search-text" type="search" id="search" name="search" placeholder="Поиск:" required=""><button type="submit" class="button-search">Искать</button></form>
         <a href="#" class="header-button button-bookmarks">Закладки: 0</a>
         <a href="#" class="header-button button-cart">Корзина: 0</a>
         <a href="#" class="header-button button-order">Оформить заказ</a>
@@ -100,6 +100,29 @@
           <a href="#" class="main-button">Заблудились? Напишите нам!</a>
         </div>
       </div>
+    </section>
+    <section class="modal modal--write-us">
+      <h2 class="visually-hidden">Форма авторизации</h2>
+      <form class="write-us" action="https://echo.htmlacademy.ru" method="post">
+        <div class="write-us__contacts write-us__field">
+          <p><label for="write-us-name">Ваше имя:</label><input type="text" placeholder="Имя Фамилия" name="name" id="write-us-name">
+          </p>
+          <p>
+            <label for="write-us-email">Ваш e-mail:</label><input type="email" placeholder="email@example.com" name="email" id="write-us-email" required>
+          </p>
+        </div>
+        <p class="write-us__field">
+          <label for="write-us-text">Текст письма:</label><textarea placeholder="В свободной форме" name="text" id="write-us-text" cols="30" rows="6" required></textarea>
+        </p>
+        <div class="write-us__controls">
+          <button type="submit" class="main-button">Отправить</button>
+          <button type="button" class="write-us__close button-close" aria-label="Закрыть"></button>
+        </div>
+      </form>
+    </section>
+    <section class="modal modal--map">
+      <h2 class="visually-hidden">Подробная карта проезда</h2>
+      <div class="map-popup"><img src="img/map-popup.png" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="940" height="446"><button class="button-close"type="button" aria-label="Закрыть"></button></div>
     </section>
   </main>
   <footer>

@@ -13,7 +13,7 @@
     <div class="header-top">
       <div class="wrapper">
         <a href="index.html" class="logo header-logo"><img src="img/logo.svg" alt="Логотип «Техномарт»" width="108" height="18"></a>
-        <form action="" class="form-search" method="get"><label for="search" class="visually-hidden">Поиск по сайту</label><input class="search-text" type="search" id="search" name="search" placeholder="Поиск:"><button type="submit" class="button-search">Искать</button></form>
+        <form action="https://echo.htmlacademy.ru" class="form-search" method="get"><label for="search" class="visually-hidden">Поиск по сайту</label><input class="search-text" type="search" id="search" name="search" placeholder="Поиск:" required=""><button type="submit" class="button-search">Искать</button></form>
         <a href="#" class="header-button button-bookmarks button-bookmarks--fill">Закладки: 1</a>
         <a href="#" class="header-button button-cart button-cart--full">Корзина: 10</a>
         <a href="#" class="header-button button-order">Оформить заказ</a>
@@ -56,13 +56,13 @@
   </header>
   <main class="tools">
     <div class="wrapper">
-      <h2>Перфораторы</h2>
       <ul class="breadcrumbs">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Каталог</a></li>
-        <li><a href="#">Инструмент</a></li>
-        <li>Перфораторы</li>
+        <li class="breadcrumbs__item breadcrumbs__item--home"><a href="index.html" aria-label="Главная страница"></a></li>
+        <li class="breadcrumbs__item"><a href="#">Каталог</a></li>
+        <li class="breadcrumbs__item"><a href="#">Инструмент</a></li>
+        <li class="breadcrumbs__item">Перфораторы</li>
       </ul>
+      <h2 class="main-header">Перфораторы</h2>
       <section class="tool-filter">
         <h3>Фильтры:</h3>
         <!-- Форма, устанавливающая критерии отбора инструментов -->
