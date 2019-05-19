@@ -55,24 +55,65 @@
     </nav>
   </header>
   <main class="tools">
-    <div class="wrapper">
+    <section class="wrapper tools__nav">
+      <h2 class="main-header">Перфораторы</h2>
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item breadcrumbs__item--home"><a href="index.html" aria-label="Главная страница"></a></li>
         <li class="breadcrumbs__item"><a href="#">Каталог</a></li>
         <li class="breadcrumbs__item"><a href="#">Инструмент</a></li>
         <li class="breadcrumbs__item">Перфораторы</li>
       </ul>
-      <h2 class="main-header">Перфораторы</h2>
-      <section class="tool-filter">
-        <h3>Фильтры:</h3>
-        <!-- Форма, устанавливающая критерии отбора инструментов -->
+    </section>
+    <div class="tools__catalog wrapper">
+      <section class="tools__filter">
+        <h3 class="tools__title">Фильтр:</h3>
+        <form action="https://htmlacademy.ru/echo/" class="filter" method="get">
+          <fieldset>
+            <legend>Цена:</legend>
+            <div class="filter__range">Cost Bar</div>
+            <p class="filter__cost-set">
+              <input type="number" class="filter__cost filter__cost--min" name="min-cost">
+              &ndash;
+              <input type="number" class="filter__cost filter__cost--max" name="max-cost">
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul class="filter__brand filter-list">
+              <li class="filter-list__item"><input class="visually-hidden" name="brand-bosch" id="brand-bosch" type="checkbox" checked><label for="brand-bosch">Bosch</label></li>
+              <li class="filter-list__item"><input class="visually-hidden" name="brand-interskol" id="brand-interskol" type="checkbox"><label for="brand-interskol">Интерскол</label></li>
+              <li class="filter-list__item"><input class="visually-hidden" name="brand-makita" id="brand-makita" type="checkbox" checked><label for="brand-makita">Makita</label></li>
+              <li class="filter-list__item"><input class="visually-hidden" name="brand-dewalt" id="brand-dewalt" type="checkbox"><label for="brand-dewalt">Dewalt</label></li>
+              <li class="filter-list__item"><input class="visually-hidden" name="brand-hitachi" id="brand-hitachi" type="checkbox"><label for="brand-hitachi">Hitachi</label></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
+            <ul class="filter__power filter-list">
+              <li class="filter-list__item filter-list__item--power"><input id="power-battery" class="visually-hidden" type="radio" name="power-list" value="power-battery" checked><label for="power-battery">Аккумуляторные</label></li>
+              <li class="filter-list__item filter-list__item--power"><input id="power-ac" class="visually-hidden" type="radio" name="power-list" value="power-ac"><label for="power-ac">Сетевые</label></li>
+            </ul>
+          </fieldset>
+          <button class="filter__submit catalog-button" type="submit">Показать</button>
+        </form>
       </section>
-      <section class="tool-sort">
-        <h3>Сортировка:</h3>
-        <!-- Сортировка отобранных инструментов -->
-      </section>
-      <section class="tool-page">
+      <section class="tools__content">
         <h3 class="visually-hidden">Выбранные перфораторы</h3>
+        <p class="tools__sort sort-type tools__title" aria-label="Сортировка интсрументов"><span>Сортировка:</span>
+          <a class="sort-type__item sort-type__item--active">По цене</a>
+          <a class="sort-type__item" href="#">По типу</a>
+          <a class="sort-type__item" href="#">По функционалу</a>
+          <a class="sort-type__icon sort-type__item--active" href="#" aria-label="По возрастанию">
+            <svg width="10" height="11">
+              <polygon points="0,10 5.5,0 11,10"></polygon>
+            </svg>
+          </a>
+          <a class="sort-type__icon" href="#" aria-label="По убыванию">
+            <svg width="10" height="11">
+              <polygon points="0,0 11,0 5.5,10"></polygon>
+            </svg>
+          </a>
+        </p>
         <ul class="tool-list">
           <li class="tool-list__item">
             <h4>Перфоратор BOSCH<br>BFG 3000</h4>
@@ -146,10 +187,10 @@
         </ul>
       </section>
     </div>
-    <section class="tool-info">
+    <section class="tools__info">
       <div class="wrapper">
         <h3>Пара слов о перфораторах</h3>
-        <p class="main-text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+        <p class="main-text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В&nbsp;ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
       </div>
     </section>
     <section class="modal modal--cart-plus">
@@ -158,7 +199,6 @@
         <div class="cart-plus__text dialog__text">
           <p>Товар добавлен в корзину!</p>
         </div>
-
         <div class="cart-plus__controls dialog__controls">
           <button type="button" class="main-button">Оформить заказ</button>
           <button type="button" class="main-button main-button--white">Продолжить покупки</button>

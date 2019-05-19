@@ -79,6 +79,8 @@ body {
 }
 
 .logo {
+  position: relative; /* Чтоб состояние active в ie11 передалось имиджу */
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,6 +91,16 @@ body {
 
   background-color: #ee3643;
   border-bottom: 5px solid #b52933;
+}
+
+/* Чтоб состояние active в ie11 передалось имиджу */
+.logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .logo:hover {
@@ -749,15 +761,21 @@ footer .wrapper {
   margin: 0;
 }
 
-.tool-info {
+.tools__info {
   padding-top: 50px;
   padding-bottom: 50px;
 
   background-color: #f2f6f8;
 }
 
-.tool-info h3 {
+.tools__info h3 {
   margin: 0;
+  margin-bottom: 25px;
+
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .main-header {
@@ -1037,6 +1055,8 @@ footer .wrapper {
 }
 
 .tools .main-header {
+  margin: 0;
+
   background-color: #f2f6f8;
 }
 
@@ -1069,4 +1089,295 @@ footer .wrapper {
 
 .cart-plus__controls .main-button {
   width: calc(50% - 10px);
+}
+
+.tools__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.tools__nav .breadcrumbs {
+  order: 0;
+}
+
+.tools__nav h2 {
+  order: 1;
+}
+
+
+.tools__catalog {
+  display: flex;
+  justify-content: space-between;
+      align-items: flex-start;
+
+  -ms-align-items: flex-start;
+}
+
+.tools__filter {
+  width: 220px;
+}
+
+.tools__content {
+  width: 700px;
+}
+
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.tool-list__item {
+  box-sizing: border-box;
+  width: 220px;
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  line-height: 20px;
+
+  border: 1px solid #e5e5e5;
+}
+
+.sort-type {
+  display: flex;
+}
+
+.sort-type span {
+  margin-right: auto;
+}
+
+.sort-type__item {
+  margin-right: 35px;
+  margin-left: 35px;
+}
+
+.sort-type__item {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1;
+  font-family: "PTSans", Arial, sans-serif;
+  color: #c5c5c5;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border-bottom: 1px dotted #ee3643;
+}
+
+.sort-type__item:hover {
+  color: #000000;
+
+  border-bottom-style: solid;
+}
+
+.sort-type__item:active,
+.sort-type__item--active:hover,
+.sort-type__item--active {
+  color: #ee3643;
+
+  border-bottom: 0;
+}
+
+.sort-type__icon {
+  position: relative; /* Чтоб состояние active в ie11 передалось имиджу */
+
+  width: 11px;
+  height: 11px;
+  margin-left: 25px;
+}
+
+.sort-type__icon svg {
+  fill: #c5c5c5;
+}
+
+.sort-type__icon:hover svg {
+  fill: #000000;
+}
+
+.sort-type__item--active:hover svg {
+  fill: #ee3643;
+}
+
+.sort-type__item--active svg,
+.sort-type__icon:active svg {
+  fill: #ee3643;
+}
+
+/* ::after нужен, чтоб победить глюк ie11, у которого ссылка не передает
+   состояние :active вложенным в нее элементам */
+.sort-type__icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.tools__title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 12px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1;
+  font-family: "PTSans", Arial, sans-serif;
+  text-transform: uppercase;
+
+  background-color: #f7f3ec;
+  border-radius: 5px;
+}
+
+.filter fieldset {
+  margin: 0;
+  margin-top: 25px;
+  padding: 0;
+  padding-bottom: 25px;
+
+  border: 0 none transparent;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.filter fieldset:nth-last-child(2) {
+  margin-bottom: 50px;
+
+  border: 0 none transparent;
+}
+
+.filter legend {
+  margin-bottom: 25px;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1;
+  font-family: "PTSans", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.filter-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.filter-list__item {
+  margin-bottom: 25px;
+
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 1;
+  font-family: "PTSans", Arial, sans-serif;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.filter-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.filter-list__item label {
+  position: relative;
+  padding-left: 35px;
+}
+
+.filter-list__item label::before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background-color: transparent;
+  background-image: url(../img/sprite1.svg#checkbox-off-view);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.filter-list__item input:focus ~ label::before,
+.filter-list__item label:hover::before {
+  opacity: 0.39;
+}
+
+.filter-list__item label:active::before {
+  opacity: 0.13;
+}
+
+.filter-list__item input:checked ~ label::before {
+  background-image: url(../img/sprite1.svg#checkbox-on-view);
+}
+
+.filter-list__item--power label::before {
+  background-image: url(../img/sprite1.svg#radio-off-view);
+}
+
+.filter-list__item--power input:checked ~ label::before {
+  background-image: url(../img/sprite1.svg#radio-on-view);
+}
+
+.catalog-button {
+  width: 140px;
+  padding: 10px;
+
+  font-size: 13px;
+  line-height: 1;
+  font-family: "PTSans", Arial, sans-serif;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  outline: none;
+}
+
+.catalog-button:focus,
+.catalog-button:hover {
+  border-color: #bdc6ca;
+}
+
+.catalog-button:active {
+  border-color: #ee3744;
+}
+
+.filter__cost-set {
+  text-align: justify;
+  text-align-last: justify;
+}
+
+.filter__range {
+  width: calc(100% - 40px);
+  padding: 12px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 7px;
+
+  background-color: #f7f3ec;
+  border-radius: 5px;
+  border: 0;
+}
+
+.filter__cost {
+  padding: 10px 0px  10px 20px;
+
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 1;
+  font-family: "PTSans", Arial, sans-serif;
+  text-transform: uppercase;
+
+  background-color: #f7f3ec;
+  border-radius: 5px;
+  border: 0;
+  /*text-align: center;*/
+  width: 75px;
 }
