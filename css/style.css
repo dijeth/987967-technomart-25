@@ -715,6 +715,8 @@ footer .wrapper {
   border-radius: 3px;
 
   box-sizing: border-box;
+
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
 .main-button:hover {
