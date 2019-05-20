@@ -713,6 +713,8 @@ footer .wrapper {
   background-color: #ee3643;
   border: 0;
   border-radius: 3px;
+
+  box-sizing: border-box;
 }
 
 .main-button:hover {
@@ -798,7 +800,7 @@ footer .wrapper {
   top: 50%;
   right: 30px;
 
-  width: 233px;
+  width: 253px;
 
   transform: translateY(-50%);
 }
@@ -838,11 +840,11 @@ footer .wrapper {
 }
 
 .about__info .main-button {
-  width: 200px;
+  width: 220px;
 }
 
 .about__contacts .main-button {
-  width: calc(100% - 20px);
+  width: 100%;
 }
 
 .about__contacts {
@@ -1352,6 +1354,7 @@ footer .wrapper {
 .filter__cost-set {
   text-align: justify;
   text-align-last: justify;
+  margin: 0;
 }
 
 .filter__range {

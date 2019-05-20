@@ -46,8 +46,8 @@
   <view id="fb-view" viewBox="0 84 40 42" />
   <view id="ins-view" viewBox="40 84 40 42" />
   <view id="home-view" viewBox="90 96 20 17" />
-  <view id="checkbox-off-view" viewBox="170 95 22 22" />
-  <view id="checkbox-on-view" viewBox="131 95 22 22" />
+  <view id="checkbox-off-view" viewBox="131 95 22 22" />
+  <view id="checkbox-on-view" viewBox="170 95 22 22" />
   <view id="close-view" viewBox="210 94 21 21" />
   <view id="right-small-view" viewBox="257 99 7 12" />
   <view id="home-dark-view" viewBox="290 96 20 17" />

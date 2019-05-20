@@ -72,26 +72,28 @@
             <legend>Цена:</legend>
             <div class="filter__range">Cost Bar</div>
             <p class="filter__cost-set">
-              <input type="number" class="filter__cost filter__cost--min" name="min-cost">
+              <label for="id-filter-cost-min" class="visually-hidden">Минимальная цена</label>
+              <input id="id-filter-cost-min" type="number" class="filter__cost filter__cost--min" name="min-cost" value="1">
               &ndash;
-              <input type="number" class="filter__cost filter__cost--max" name="max-cost">
+              <label for="id-filter-cost-max" class="visually-hidden">Максимальная цена</label>
+              <input id="id-filter-cost-max" type="number" class="filter__cost filter__cost--max" name="max-cost" value="30000">
             </p>
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
             <ul class="filter__brand filter-list">
-              <li class="filter-list__item"><input class="visually-hidden" name="brand-bosch" id="brand-bosch" type="checkbox" checked><label for="brand-bosch">Bosch</label></li>
-              <li class="filter-list__item"><input class="visually-hidden" name="brand-interskol" id="brand-interskol" type="checkbox"><label for="brand-interskol">Интерскол</label></li>
-              <li class="filter-list__item"><input class="visually-hidden" name="brand-makita" id="brand-makita" type="checkbox" checked><label for="brand-makita">Makita</label></li>
-              <li class="filter-list__item"><input class="visually-hidden" name="brand-dewalt" id="brand-dewalt" type="checkbox"><label for="brand-dewalt">Dewalt</label></li>
-              <li class="filter-list__item"><input class="visually-hidden" name="brand-hitachi" id="brand-hitachi" type="checkbox"><label for="brand-hitachi">Hitachi</label></li>
+              <li class="filter-list__item"><input class="visually-hidden" name="brand-bosch" id="id-brand-bosch" type="checkbox" checked><label for="id-brand-bosch">Bosch</label></li>
+              <li class="filter-list__item"><input class="visually-hidden" name="brand-interskol" id="id-brand-interskol" type="checkbox"><label for="id-brand-interskol">Интерскол</label></li>
+              <li class="filter-list__item"><input class="visually-hidden" name="brand-makita" id="id-brand-makita" type="checkbox" checked><label for="id-brand-makita">Makita</label></li>
+              <li class="filter-list__item"><input class="visually-hidden" name="brand-dewalt" id="id-brand-dewalt" type="checkbox"><label for="id-brand-dewalt">Dewalt</label></li>
+              <li class="filter-list__item"><input class="visually-hidden" name="brand-hitachi" id="id-brand-hitachi" type="checkbox"><label for="id-brand-hitachi">Hitachi</label></li>
             </ul>
           </fieldset>
           <fieldset>
             <legend>Питание:</legend>
             <ul class="filter__power filter-list">
-              <li class="filter-list__item filter-list__item--power"><input id="power-battery" class="visually-hidden" type="radio" name="power-list" value="power-battery" checked><label for="power-battery">Аккумуляторные</label></li>
-              <li class="filter-list__item filter-list__item--power"><input id="power-ac" class="visually-hidden" type="radio" name="power-list" value="power-ac"><label for="power-ac">Сетевые</label></li>
+              <li class="filter-list__item filter-list__item--power"><input id="id-power-battery" class="visually-hidden" type="radio" name="power-list" value="power-battery" checked><label for="id-power-battery">Аккумуляторные</label></li>
+              <li class="filter-list__item filter-list__item--power"><input id="id-power-ac" class="visually-hidden" type="radio" name="power-list" value="power-ac"><label for="id-power-ac">Сетевые</label></li>
             </ul>
           </fieldset>
           <button class="filter__submit catalog-button" type="submit">Показать</button>
@@ -104,12 +106,12 @@
           <a class="sort-type__item" href="#">По типу</a>
           <a class="sort-type__item" href="#">По функционалу</a>
           <a class="sort-type__icon sort-type__item--active" href="#" aria-label="По возрастанию">
-            <svg width="10" height="11">
+            <svg width="11" height="11">
               <polygon points="0,10 5.5,0 11,10"></polygon>
             </svg>
           </a>
           <a class="sort-type__icon" href="#" aria-label="По убыванию">
-            <svg width="10" height="11">
+            <svg width="11" height="11">
               <polygon points="0,0 11,0 5.5,10"></polygon>
             </svg>
           </a>
@@ -200,7 +202,7 @@
           <p>Товар добавлен в корзину!</p>
         </div>
         <div class="cart-plus__controls dialog__controls">
-          <button type="button" class="main-button">Оформить заказ</button>
+          <a href="#" class="main-button">Оформить заказ</a>
           <button type="button" class="main-button main-button--white">Продолжить покупки</button>
           <button type="button" class="dialog__close-button" aria-label="Закрыть"></button>
         </div>
@@ -210,7 +212,7 @@
   <footer>
     <div class="footer-top">
       <div class="wrapper">
-        <p class="logo footer-logo"><img src="img/logo.svg" alt="Логотип «Техномарт»" width="108" height="18"></p>
+        <a href="index.html" class="logo footer-logo"><img src="img/logo.svg" alt="Логотип «Техномарт»" width="108" height="18"></a>
         <ul class="footer-nav footer-top-nav">
           <li class="footer-nav-item"><a href="#">Компания</a></li>
           <li class="footer-nav-item"><a href="#">Новости</a></li>
