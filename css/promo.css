@@ -91,16 +91,6 @@
   background-color: #c5c5c5;
 }
 
-.promo__item--new::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 59px;
-  background: transparent url(../img/new_flag.png) 0 no-repeat;
-}
-
 
 .slider-button {
   position: absolute;
