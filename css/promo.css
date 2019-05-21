@@ -1,17 +1,16 @@
 .promo {
+  display: flex;
+  flex-wrap: wrap;
   width: 960px;
   margin: auto;
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 20px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .promo h3 {
   margin-top: 0;
   margin-bottom: 13px;
-
   font-style: bold;
   font-size: 24px;
   line-height: 30px;
@@ -20,12 +19,10 @@
 
 .promo__item {
   position: relative;
-
   width: 150px;
   margin-right: 20px;
   margin-bottom: 20px;
   padding: 20px 130px 23px 20px;
-
   background-color: #ffbf47;
 }
 
@@ -35,10 +32,8 @@
   position: absolute;
   top: 50%;
   right: 0;
-
   width: 130px;
   height: 130px;
-
   background-image: url(../img/sprite1.svg#icon1-view);
   background-repeat: no-repeat;
   background-position: 50%;
@@ -56,19 +51,16 @@
 
 .promo__item--tractor::before {
   right: 6px;
-
   background-image: url(../img/sprite1.svg#icon2-view);
 }
 
 .promo__item--cart::before {
   right: 10px;
-
   background-image: url(../img/sprite1.svg#icon3-view);
 }
 
 .promo__item--car::before {
   right: 6px;
-
   background-image: url(../img/sprite1.svg#icon4-view);
 }
 
@@ -91,13 +83,11 @@
 
 .promo-slider {
   position: relative;
-
   width: 620px;
   height: 266px;
   margin-right: 20px;
   margin-bottom: 20px;
   overflow: hidden;
-
   background-color: #c5c5c5;
 }
 
@@ -106,10 +96,8 @@
   position: absolute;
   top: 0;
   right: 0;
-
   width: 60px;
   height: 59px;
-
   background: transparent url(../img/new_flag.png) 0 no-repeat;
 }
 
@@ -118,12 +106,9 @@
   position: absolute;
   top: 50%;
   z-index: 1;
-
   width: 22px;
   height: 40px;
-
   color: transparent;
-
   background-color: transparent;
   background-image: url(../img/sprite1.svg#arrow-left-view);
   background-repeat: no-repeat;
@@ -139,14 +124,12 @@
 
 .slider-button__next {
   right: 25px;
-
   background-image: url(../img/sprite1.svg#arrow-right-view);
 }
 
 .slider__action {
   position: absolute;
   bottom: 20px;
-
   width: 175px;
 }
 
@@ -155,17 +138,15 @@
   bottom: 31px;
   left: 50%;
   z-index: 1;
-
   margin: 0;
   padding: 0;
-
   list-style: none;
-
   transform: translateX(-50%);
 }
 
 .slider-control {
   display: inline-block;
+  vertical-align: top;
   padding: 0 3px;
 }
 
@@ -173,7 +154,6 @@
   display: block;
   width: 6px;
   height: 6px;
-
   background-color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 50%;
@@ -202,18 +182,15 @@
 .slider {
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
 
 .slider__item {
   position: relative;
-
   height: 226px;
   padding: 20px;
   padding-left: 25px;
-
   background-color: #333333;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -231,7 +208,6 @@
 .slider__item h3 {
   margin: 0;
   padding: 0;
-
   font-style: bold;
   font-size: 36px;
   line-height: 1;
@@ -241,7 +217,6 @@
 .slider__slogan {
   margin: 0;
   padding: 0;
-
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
