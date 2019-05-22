@@ -1317,7 +1317,6 @@ footer .wrapper {
 }
 
 .filter__cost {
-  /*text-align: center;*/
   width: 75px;
   padding: 10px 0  10px 20px;
   font-weight: normal;
@@ -1332,12 +1331,16 @@ footer .wrapper {
 
 .tool {
   position: relative;
+}
+
+.tool__section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
   width: 220px;
+  min-height: 318px;
   padding-bottom: 20px;
   font-size: 18px;
   line-height: 20px;
@@ -1345,16 +1348,20 @@ footer .wrapper {
   border: 1px solid #e5e5e5;
 }
 
-.tool:focus,
-.tool:hover {
+.tool__section:focus,
+.tool__section:hover,
+.tool__button:focus ~ .tool__section,
+.tool__button:hover ~ .tool__section {
+  border-color: #ffffff;
   outline: none;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
-  border: 0;
 }
 
-.tool:focus .tool__image,
-.tool:hover .tool__image {
-  display: none;
+.tool__section:focus .tool__image,
+.tool__section:hover .tool__image,
+.tool__button:focus ~ .tool__section .tool__image,
+.tool__button:hover ~ .tool__section .tool__image {
+  z-index: -10;
 }
 
 .tool h4 {
@@ -1401,6 +1408,9 @@ footer .wrapper {
 }
 
 .tool__button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1419,6 +1429,7 @@ footer .wrapper {
 }
 
 .tool__button--bookmark {
+  top: 89px;
   color: #32425c;
   border: 3px solid #63a63e;
 }
@@ -1435,8 +1446,7 @@ footer .wrapper {
 }
 
 .tool__button--buy {
-  position: relative;
-  margin-bottom: 7px;
+  top: 44px;
   color: #ffffff;
   background-color: #63a63e;
   box-shadow: inset 0 -3px 0 #367315;
@@ -1461,13 +1471,6 @@ footer .wrapper {
   outline: none;
 }
 
-.tool__button--buy:focus ~ .tool__image,
-.tool__button--buy:hover ~ .tool__image,
-.tool__button--bookmark:focus ~ .tool__image,
-.tool__button--bookmark:hover ~ .tool__image {
-  display: none;
-}
-
 .tool__button--buy:active {
   background-color: #518534;
   box-shadow: none;
@@ -1478,23 +1481,14 @@ footer .wrapper {
   opacity: 1;
 }
 
-.tool__section {
-  position: relative;
+.tool__image {
+  margin: 0;
+  background-color: #fff;
+  height: 170px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 170px;
-  margin: 0;
-  overflow: hidden;
-}
-
-.tool__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
+  z-index: 10;
 }
 
 .tool__oldcost {
@@ -1513,10 +1507,11 @@ footer .wrapper {
   content: "";
   position: absolute;
   top: 0;
-  right: 0px;
+  right: 0;
   width: 60px;
   height: 59px;
   background: transparent url(../img/new_flag.png) 0 no-repeat;
+  z-index: 20;
 }
 
 .pagination {
@@ -1575,10 +1570,10 @@ footer .wrapper {
 .popular-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
-  justify-content: space-between;
 }
 
 .popular-list__item {
@@ -1589,18 +1584,18 @@ footer .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   width: 220px;
   height: 145px;
   padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid #e5e5e5;
   background-color: #ffffff;
+  border: 1px solid #e5e5e5;
 }
 
 .brand:focus,
 .brand:hover {
-  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
   border: 0;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
 }
 
 .brand:active img {
