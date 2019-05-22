@@ -1331,6 +1331,7 @@ footer .wrapper {
 }
 
 .tool {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1338,7 +1339,6 @@ footer .wrapper {
   padding-bottom: 20px;
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
-  position: relative;
 }
 
 .tool:focus,
@@ -1350,11 +1350,6 @@ footer .wrapper {
 .tool:focus .tool__image,
 .tool:hover .tool__image {
   display: none;
-}
-
-.tool:focus .tool__action,
-.tool:hover .tool__action {
-  display: flex;
 }
 
 .tool h4 {
@@ -1391,7 +1386,7 @@ footer .wrapper {
   content: "";
   position: absolute;
   top: 50%;
-  right: -38px;
+  right: -37px;
   display: block;
   width: 0;
   height: 0;
@@ -1426,6 +1421,7 @@ footer .wrapper {
 .tool__button--bookmark:focus,
 .tool__button--bookmark:hover {
   border-color: #32425c;
+  outline: none;
 }
 
 .tool__button--bookmark:active {
@@ -1457,6 +1453,14 @@ footer .wrapper {
 .tool__button--buy:focus,
 .tool__button--buy:hover {
   background-color: #5fbb2d;
+  outline: none;
+}
+
+.tool__button--buy:focus ~ .tool__image,
+.tool__button--buy:hover ~ .tool__image,
+.tool__button--bookmark:focus ~ .tool__image,
+.tool__button--bookmark:hover ~ .tool__image {
+  display: none;
 }
 
 .tool__button--buy:active {
@@ -1470,18 +1474,22 @@ footer .wrapper {
 }
 
 .tool__section {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
   align-items: center;
-  height: 165px;
+  height: 170px;
   margin: 0;
   overflow: hidden;
+  width: 100%;
 }
 
-.tool__action {
-  display: none;
+.tool__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
 }
 
 .tool__oldcost {
@@ -1500,7 +1508,7 @@ footer .wrapper {
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  right: -1px;
   width: 60px;
   height: 59px;
   background: transparent url(../img/new_flag.png) 0 no-repeat;
