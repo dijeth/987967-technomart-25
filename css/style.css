@@ -1349,6 +1349,7 @@ footer .wrapper {
 .tool:hover {
   outline: none;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+  border: 0;
 }
 
 .tool:focus .tool__image,
@@ -1512,7 +1513,7 @@ footer .wrapper {
   content: "";
   position: absolute;
   top: 0;
-  right: -1px;
+  right: 0px;
   width: 60px;
   height: 59px;
   background: transparent url(../img/new_flag.png) 0 no-repeat;
@@ -1582,4 +1583,30 @@ footer .wrapper {
 
 .popular-list__item {
   margin-bottom: 20px;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 145px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+}
+
+.brand:focus,
+.brand:hover {
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+  border: 0;
+}
+
+.brand:active img {
+  opacity: 0.3;
+}
+
+.brand:active {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
 }
