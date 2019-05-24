@@ -27,13 +27,11 @@
       <a href="#" class="main-button main-button--promo">для стройки</a>
     </div>
     <div class="promo-slider">
-      <input class="slider-toggle visually-hidden" type="radio" id="slide1" name="slider-toggle" value="slide1" checked>
-      <input class="slider-toggle visually-hidden" type="radio" id="slide2" name="slider-toggle" value="slide2">
-      <button class="slider-button slider-button__prev" type="button" aria-label="Предыдущий промо-блок"></button>
+      <button class="slider-button slider-button__prev" type="button" aria-label="Предыдущий промо-блок" disabled></button>
       <button class="slider-button slider-button__next" type="button" aria-label="Следующий промо-блок"></button>
-      <ul class="slider-controls">
-        <li class="slider-control"><label for="slide1"></label></li>
-        <li class="slider-control"><label for="slide2"></label></li>
+      <ul class="control-list">
+        <li class="control-list__item control-list__item--active"><button type="button">Промо-слайд 1</button></li>
+        <li class="control-list__item"><button type="button">Промо-слайд 2</button></li>
       </ul>
       <ul class="slider">
         <li class="slider__item slide1">
@@ -43,6 +41,31 @@
         </li>
         <li class="slider__item slide2">
           <h3>Дрели</h3>
+          <p class="slider__slogan">Соседям на радость!</p>
+          <a class="slider__action main-button" href="catalog.html">Открыть каталог</a>
+        </li>
+        <li class="slider__item slide1">
+          <h3>1111</h3>
+          <p class="slider__slogan">Соседям на радость!</p>
+          <a class="slider__action main-button" href="catalog.html">Открыть каталог</a>
+        </li>
+        <li class="slider__item slide2">
+          <h3>2222</h3>
+          <p class="slider__slogan">Соседям на радость!</p>
+          <a class="slider__action main-button" href="catalog.html">Открыть каталог</a>
+        </li>
+        <li class="slider__item slide1">
+          <h3>3333</h3>
+          <p class="slider__slogan">Соседям на радость!</p>
+          <a class="slider__action main-button" href="catalog.html">Открыть каталог</a>
+        </li>
+        <li class="slider__item slide2">
+          <h3>4444</h3>
+          <p class="slider__slogan">Соседям на радость!</p>
+          <a class="slider__action main-button" href="catalog.html">Открыть каталог</a>
+        </li>
+        <li class="slider__item slide1">
+          <h3>5555</h3>
           <p class="slider__slogan">Соседям на радость!</p>
           <a class="slider__action main-button" href="catalog.html">Открыть каталог</a>
         </li>
@@ -59,6 +82,7 @@
       </div>
     </div>
   </section>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
