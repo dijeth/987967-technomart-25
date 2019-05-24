@@ -696,6 +696,7 @@ footer .wrapper {
   background-color: #ee3643;
   border: 0;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .main-button:hover,
@@ -876,6 +877,7 @@ footer .wrapper {
   padding-top: 37px;
   border-top: 7px solid #ff5357;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.75);
+  background-color: #fff;
 }
 
 .write-us label,
@@ -936,7 +938,6 @@ footer .wrapper {
   width: 100%;
 }
 
-.map-popup__close-button,
 .dialog__close-button {
   position: absolute;
   top: 9px;
@@ -1430,6 +1431,7 @@ footer .wrapper {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .tool__button--bookmark {
@@ -2169,3 +2171,17 @@ footer .wrapper {
   width: 175px;
 }
 
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+}
+
+.modal--show {
+  display: flex;
+}

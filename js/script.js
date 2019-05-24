@@ -43,7 +43,7 @@ Slider.prototype.init = function(param) {
     dot_list = param.dot_list && document.getElementsByClassName(param.dot_list)[0],
     active_dot = param.active_dot,
     disable_action = param.disable_action;
-    item_rect = slider.getBoundingClientRect(),
+  item_rect = slider.getBoundingClientRect(),
     slider_rect = slider_list.getBoundingClientRect(),
     item_count = Math.round(slider_rect.height / item_rect.height),
     item_current = Math.round((item_rect.top - slider_rect.top) / item_rect.height),
@@ -51,8 +51,8 @@ Slider.prototype.init = function(param) {
 
   if (dot_list) init_dots();
 
-  if (button_prev) button_prev.addEventListener('click', (function(obj) { return function() { obj.go('prev') }})(self));
-  if (button_next) button_next.addEventListener('click', (function(obj) { return function() { obj.go('next') }})(self));
+  if (button_prev) button_prev.addEventListener('click', (function(obj) { return function() { obj.go('prev') } })(self));
+  if (button_next) button_next.addEventListener('click', (function(obj) { return function() { obj.go('next') } })(self));
 
   if (disable_action) {
     this.set_action(slider_list, false);
@@ -134,3 +134,47 @@ var service_slider = new Slider({
   active_dot: 'service-list__item--active',
   disable_action: 'button-send'
 });
+
+/* Модальные окна */
+function closer() {
+  var elem = this;
+  while (!elem.parentElement.classList.contains('modal--show')) elem = elem.parentElement;
+  elem.parentElement.classList.remove('modal--show');
+};
+
+document.getElementsByClassName('main-button--white')[0].addEventListener('click', closer);
+
+for (var is = document.getElementsByClassName('dialog__close-button'), maxi = is.length, i = 0; i < maxi; i++) {
+  is[i].addEventListener('click', closer);
+};
+
+var b = document.querySelector('.contacts .main-button');
+b.addEventListener('click', function() {
+  document.getElementsByClassName('modal--write-us')[0].classList.add('modal--show');
+});
+b.removeAttribute('href');
+
+var b = document.querySelector('.contacts__map a');
+b.addEventListener('click', function() {
+  document.getElementsByClassName('modal--map')[0].classList.add('modal--show');
+});
+b.removeAttribute('href');
+
+for (var is = document.getElementsByClassName('tool__button--buy'), maxi = is.length, i = 0; i < maxi; i++) {
+  is[i].addEventListener('click', function() {
+    var cart = document.getElementsByClassName('button-cart')[0];
+    cart.classList.add('button-cart--full');
+    cart.innerText = cart.innerText.replace(/(\d+)/, function(a) { return Number(a) + 1 });
+    document.getElementsByClassName('modal--cart-plus')[0].classList.add('modal--show');
+  });
+  is[i].removeAttribute('href');
+};
+
+for (var is = document.getElementsByClassName('tool__button--bookmark'), maxi = is.length, i = 0; i < maxi; i++) {
+  is[i].addEventListener('click', function() {
+    var cart = document.getElementsByClassName('button-bookmarks')[0];
+    cart.classList.add('button-cart--full');
+    cart.innerText = cart.innerText.replace(/(\d+)/, function(a) { return Number(a) + 1 });
+  });
+  is[i].removeAttribute('href');
+};
