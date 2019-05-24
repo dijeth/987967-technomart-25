@@ -1,6 +1,7 @@
 function Slider (slider_list, button_prev, button_next, dot_list, active_dot, disable_action) {
   this.init(slider_list, button_prev, button_next, dot_list, active_dot, disable_action);
-  this.set_action();
+  this.set_action(this.slider, false);
+  this.set_action(this.slider.children[this.item_current], true);
 };
 
 Slider.prototype.init = function(slider_list, button_prev, button_next, dot_list, active_dot, disable_action) {
@@ -71,15 +72,14 @@ Slider.prototype.go = function(slide) { // slide = 'next', 'prev' или чис�
   this.dot_list.children[old].classList.remove(this.active_dot_class);
   this.dot_list.children[this.item_current].classList.add(this.active_dot_class);
 
-  this.set_action();
+  this.set_action(this.slider.children[old], false);
+  this.set_action(this.slider.children[this.item_current], true);
 };
 
-Slider.prototype.set_action = function() { // Дизаблим активные кнопки на скрытых слайдах, чтоб они не воспринимали фокус по табу
-  for (var is = this.slider.getElementsByClassName(this.disable_action), maxi = is.length, i = 0; i < maxi; i++) {
-    is[i].setAttribute('tabindex', -1);
-  };
-  for (var is = this.slider.children[this.item_current].getElementsByClassName(this.disable_action), maxi = is.length, i = 0; i < maxi; i++) {
-    is[i].removeAttribute('tabindex');
+Slider.prototype.set_action = function(where, enable) { // Дизаблим активные кнопки на скрытых слайдах, чтоб они не воспринимали фокус по табу
+  for (var is = where.getElementsByClassName(this.disable_action), maxi = is.length, i = 0; i < maxi; i++) {
+    if (enable) is[i].removeAttribute('tabindex')
+      else is[i].setAttribute('tabindex', -1);
   };
 };
 
