@@ -18,8 +18,8 @@ function Slider(param) {
 };
 
 Slider.prototype.init = function(param) {
-  function getHandler(n) {
-    return function() { self.go(n) }
+  function getHandler(obj, n) {
+    return function() { obj.go(n) }
   };
 
   function init_dots() {
@@ -29,10 +29,10 @@ Slider.prototype.init = function(param) {
         dot_list.appendChild(elem);
       };
 
-      dot_list.children[i].addEventListener('click', getHandler(i));
+      dot_list.children[i].addEventListener('click', getHandler(self, i));
     };
 
-    if (!active_dot) active_dot = dot_list + '--active';
+    if (!active_dot) active_dot = param.dot_list + '--active';
     dot_list.children[0].classList.add(active_dot);
   };
 
@@ -51,8 +51,8 @@ Slider.prototype.init = function(param) {
 
   if (dot_list) init_dots();
 
-  if (button_prev) button_prev.addEventListener('click', function() { self.go('prev') });
-  if (button_next) button_next.addEventListener('click', function() { self.go('next') });
+  if (button_prev) button_prev.addEventListener('click', (function(obj) { return function() { obj.go('prev') }})(self));
+  if (button_next) button_next.addEventListener('click', (function(obj) { return function() { obj.go('next') }})(self));
 
   if (disable_action) {
     this.set_action(slider_list, false);
@@ -126,4 +126,11 @@ var promo_slider = new Slider({
   dot_list: 'control-list',
   active_dot: 'control-list__item--active',
   disable_action: 'slider__action'
+});
+
+var service_slider = new Slider({
+  slider_list: 'slide-list',
+  dot_list: 'service-list',
+  active_dot: 'service-list__item--active',
+  disable_action: 'button-send'
 });
