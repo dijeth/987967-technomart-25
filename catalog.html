@@ -70,7 +70,13 @@
         <form action="https://htmlacademy.ru/echo/" class="filter" method="get">
           <fieldset>
             <legend>Цена:</legend>
-            <div class="filter__range">Cost Bar</div>
+            <div class="filter__range bar">
+              <div class="bar__line">
+                <div class="bar__color" style="right: 50px; left: 10px;"></div>
+              <div class="bar__control bar__control--min" style="left: 0px"></div>
+              <div class="bar__control bar__control--max" style="right: 50px"></div>
+              </div>
+            </div>
             <p class="filter__cost-set">
               <label for="id-filter-cost-min" class="visually-hidden">Минимальная цена</label>
               <input id="id-filter-cost-min" type="number" class="filter__cost filter__cost--min" name="min-cost" value="1">
