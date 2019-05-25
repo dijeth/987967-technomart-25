@@ -1380,7 +1380,7 @@ footer .wrapper {
   align-items: center;
   box-sizing: border-box;
   width: 220px;
-  min-height: 318px;
+  height: 100%;
   padding-bottom: 20px;
   font-size: 18px;
   line-height: 20px;
