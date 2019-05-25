@@ -10,12 +10,43 @@ Bar.prototype.init = function(param) {
     text_min = document.querySelector(param.text_min),
     text_max = document.querySelector(param.text_max),
     color_bar = bar.querySelector(param.color_bar),
+    min_cost = Number(text_min.value),
     max_cost = Number(text_max.value),
-    fr = max_cost / bar_rect.width,
+    fr = (max_cost - min_cost) / bar_rect.width,
     self = this;
 
   min.ondragstart = function() { return false; };
   max.ondragstart = function() { return false; };
+
+  Object.defineProperty(this, 'min_value', {
+    get: function() {
+      return Number(text_min.value);
+    },
+
+    set: function(cost) {
+      var bar_rect = bar.getBoundingClientRect();
+
+      if (cost < min_cost) cost = min_cost;
+      if (cost > this.max_value) cost = this.max_value;
+
+      this.min_coord = (cost-min_cost) / fr + bar_rect.left;
+    }
+  });
+
+  Object.defineProperty(this, 'max_value', {
+    get: function() {
+      return Number(text_max.value);
+    },
+
+    set: function(cost) {
+      var bar_rect = bar.getBoundingClientRect();
+
+      if (cost < this.min_value) cost = this.min_value;
+      if (cost > max_cost) cost = max_cost;
+
+      this.max_coord = (cost-min_cost) / fr + bar_rect.left;
+    }
+  });
 
   Object.defineProperty(this, 'min_coord', {
     get: function() {
@@ -32,7 +63,7 @@ Bar.prototype.init = function(param) {
       if (x < -r.width / 2) x = -r.width / 2;
       min.style.left = x + 'px';
       color_bar.style.left = x + 'px';
-      text_min.value = Math.round((x + r.width / 2) * fr);
+      text_min.value = Math.round((x + r.width / 2) * fr)+min_cost;
     }
   });
 
@@ -53,6 +84,14 @@ Bar.prototype.init = function(param) {
       color_bar.style.right = x + 'px';
       text_max.value = Math.round(max_cost - (x + r.width / 2) * fr);
     }
+  });
+
+  text_min.addEventListener('change', function() {
+    self.min_value = Number(this.value);
+  });
+
+  text_max.addEventListener('change', function() {
+    self.max_value = Number(this.value);
   });
 
   min.addEventListener('mousedown', function(e) {
@@ -77,8 +116,8 @@ Bar.prototype.init = function(param) {
     };
   });
 
-  this.min_coord = param.min_start / fr + bar_rect.left;
-  this.max_coord = param.max_start / fr + bar_rect.left;
+  this.min_value = param.min_start;
+  this.max_value = param.max_start;
 };
 
 var bar = new Bar({
