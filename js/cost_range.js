@@ -10,8 +10,8 @@ Bar.prototype.init = function(param) {
     text_min = document.querySelector(param.text_min),
     text_max = document.querySelector(param.text_max),
     color_bar = bar.querySelector(param.color_bar),
-    min_cost = Number(text_min.value),
-    max_cost = Number(text_max.value),
+    min_cost = Number(param.bar_min),
+    max_cost = Number(param.bar_max),
     fr = (max_cost - min_cost) / bar_rect.width,
     self = this;
 
@@ -116,8 +116,8 @@ Bar.prototype.init = function(param) {
     };
   });
 
-  this.min_value = param.min_start;
-  this.max_value = param.max_start;
+  this.min_value = text_min.value;
+  this.max_value = text_max.value;
 };
 
 var bar = new Bar({
@@ -126,6 +126,6 @@ var bar = new Bar({
   text_min: '.filter__cost--min',
   text_max: '.filter__cost--max',
   color_bar: '.filter__range .bar__color',
-  min_start: 1,
-  max_start: 30000
+  bar_min: 1,
+  bar_max: 36000
 });

@@ -14,6 +14,7 @@ if (b) {
     document.getElementsByClassName('modal--write-us')[0].classList.add('modal--show');
   });
   b.removeAttribute('href');
+  b.setAttribute('tabindex', 0);
 }
 
 var b = document.querySelector('.contacts__map a');
@@ -22,6 +23,7 @@ if (b) {
     document.getElementsByClassName('modal--map')[0].classList.add('modal--show');
   });
   b.removeAttribute('href');
+  b.setAttribute('tabindex', 0);
 };
 
 for (var is = document.getElementsByClassName('tool__button--buy'), maxi = is.length, i = 0; i < maxi; i++) {
@@ -32,6 +34,7 @@ for (var is = document.getElementsByClassName('tool__button--buy'), maxi = is.le
     document.getElementsByClassName('modal--cart-plus')[0].classList.add('modal--show');
   });
   is[i].removeAttribute('href');
+  is[i].setAttribute('tabindex', 0);
 };
 
 for (var is = document.getElementsByClassName('tool__button--bookmark'), maxi = is.length, i = 0; i < maxi; i++) {
@@ -41,4 +44,5 @@ for (var is = document.getElementsByClassName('tool__button--bookmark'), maxi = 
     cart.innerText = cart.innerText.replace(/(\d+)/, function(a) { return Number(a) + 1 });
   });
   is[i].removeAttribute('href');
+  is[i].setAttribute('tabindex', 0);
 };

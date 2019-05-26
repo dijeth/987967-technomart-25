@@ -262,7 +262,7 @@ body {
 
 .header-middle {
   padding-top: 45px;
-  padding-bottom: 45px;
+  padding-bottom: 36px;
   background-color: #f2f6f8;
 }
 
@@ -841,6 +841,16 @@ footer .wrapper {
 .contacts__map {
   margin-top: 25px;
   margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.contacts__map:hover,
+.contacts__map:focus {
+  opacity: 0.8;
+}
+
+.contacts__map:active {
+  opacity: 0.5;
 }
 
 .contacts__map img {
@@ -958,6 +968,15 @@ footer .wrapper {
   background-position: 50%;
   background-size: cover;
   border: 0;
+}
+
+.dialog__close-button:focus,
+.dialog__close-button:hover {
+  opacity: 0.7;
+}
+
+.dialog__close-button:active {
+  opacity: 0.5;
 }
 
 .map-popup {
