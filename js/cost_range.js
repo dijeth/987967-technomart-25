@@ -29,7 +29,7 @@ Bar.prototype.init = function(param) {
       if (cost < min_cost) cost = min_cost;
       if (cost > this.max_value) cost = this.max_value;
 
-      this.min_coord = (cost-min_cost) / fr + bar_rect.left;
+      this.min_coord = (cost - min_cost) / fr + bar_rect.left;
     }
   });
 
@@ -44,7 +44,7 @@ Bar.prototype.init = function(param) {
       if (cost < this.min_value) cost = this.min_value;
       if (cost > max_cost) cost = max_cost;
 
-      this.max_coord = (cost-min_cost) / fr + bar_rect.left;
+      this.max_coord = (cost - min_cost) / fr + bar_rect.left;
     }
   });
 
@@ -63,7 +63,7 @@ Bar.prototype.init = function(param) {
       if (x < -r.width / 2) x = -r.width / 2;
       min.style.left = x + 'px';
       color_bar.style.left = x + 'px';
-      text_min.value = Math.round((x + r.width / 2) * fr)+min_cost;
+      text_min.value = Math.round((x + r.width / 2) * fr) + min_cost;
     }
   });
 
