@@ -321,6 +321,19 @@ body {
   opacity: 0.3;
 }
 
+.header-address a:focus::before,
+.header-address a:hover::before {
+  opacity: 1;
+}
+
+.header-address a:active::before {
+  opacity: 0.3;
+}
+
+.header-address a:active {
+  color: #c2c7ce;
+}
+
 h1 {
   width: 200px;
   margin: 0;
@@ -1474,11 +1487,11 @@ footer .wrapper {
   content: "";
   position: absolute;
   top: 50%;
-  right: -40px;
+  right: -30px;
   display: block;
   width: 0;
   height: 0;
-  border: 40px solid transparent;
+  border: 30px solid transparent;
   border-top-color: #ffffff;
   border-bottom-color: #ffffff;
   transform: translateY(-50%);
@@ -1677,7 +1690,7 @@ footer .wrapper {
 
 .brand:focus,
 .brand:hover {
-  border: 0;
+  border-color: #ffffff;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -1861,7 +1874,7 @@ footer .wrapper {
 
 .slider__item {
   position: relative;
-  height: 226px;
+  height: 222px;
   padding: 22px;
   padding-left: 25px;
   background-color: #333333;
