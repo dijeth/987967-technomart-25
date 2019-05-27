@@ -1891,6 +1891,18 @@ footer .wrapper {
   background-image: url(../img/promo-drill.jpg);
 }
 
+.slide3 {
+  background-image: url(../img/promo-3.jpg);
+}
+
+.slide4 {
+  background-image: url(../img/promo-4.jpg);
+}
+
+.slide5 {
+  background-image: url(../img/promo-5.jpg);
+}
+
 .slider__item h3 {
   margin: 0;
   margin-bottom: 2px;
@@ -1907,6 +1919,11 @@ footer .wrapper {
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
+}
+
+.slide3 h3,
+.slide3 .slider__slogan {
+  color: #333333;
 }
 
 /* Services */
