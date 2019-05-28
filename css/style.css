@@ -1350,6 +1350,7 @@ footer .wrapper {
   border: 1px solid #e5e5e5;
   border-radius: 4px;
   outline: none;
+  cursor: pointer;
 }
 
 .catalog-button:focus,
@@ -1402,6 +1403,7 @@ footer .wrapper {
   border-radius: 50%;
   box-shadow: 0 2px 0 0 #e0ddd8;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .filter__cost {
@@ -1434,22 +1436,6 @@ footer .wrapper {
   line-height: 20px;
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
-}
-
-.tool__section:focus,
-.tool__section:hover,
-.tool__button:focus ~ .tool__section,
-.tool__button:hover ~ .tool__section {
-  border-color: #ffffff;
-  outline: none;
-  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
-}
-
-.tool__section:focus .tool__image,
-.tool__section:hover .tool__image,
-.tool__button:focus ~ .tool__section .tool__image,
-.tool__button:hover ~ .tool__section .tool__image {
-  z-index: -10;
 }
 
 .tool h4 {
@@ -1570,6 +1556,40 @@ footer .wrapper {
 .tool__button--buy:hover::before {
   opacity: 1;
 }
+
+.tool:focus .tool__button,
+.tool:hover .tool__button {
+  display: flex;
+}
+
+.tool:focus,
+.tool:hover/*,
+.tool__button:focus ~ .tool__section,
+.tool__button:hover ~ .tool__section*/ {
+  border-color: #ffffff;
+  outline: none;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+}
+
+.tool__button:focus,
+.tool__button:hover {
+  display: flex;
+}
+
+.tool__button:focus ~ .tool__section .tool__image,
+.tool__button:hover ~ .tool__section .tool__image,
+.tool:hover .tool__image,
+.tool:focus .tool__image {
+  z-index: -10;
+}
+
+/*.tool__section:focus .tool__image,
+.tool__section:hover .tool__image,
+.tool__button:focus ~ .tool__section .tool__image,
+.tool__button:hover ~ .tool__section .tool__image {
+  z-index: -10;
+}
+*/
 
 .tool__image {
   z-index: 10;
@@ -1859,6 +1879,7 @@ footer .wrapper {
   background-color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .control-list__item--active button {
@@ -2017,6 +2038,7 @@ footer .wrapper {
   border: 0;
   border-bottom: 1px solid #2b364a;
   box-shadow: 0 1px 0 0 #405069;
+  cursor: pointer;
 }
 
 .service-list__item button:focus,
