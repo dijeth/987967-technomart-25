@@ -1294,14 +1294,15 @@ footer .wrapper {
 
 .filter-list__item label {
   position: relative;
-  padding-left: 35px;
+  margin-left: 35px;
+  cursor: pointer;
 }
 
 .filter-list__item label::before {
   content: "";
   position: absolute;
   top: calc(50% + 2px);
-  left: 0;
+  left: -35px;
   width: 27px;
   height: 27px;
   background-color: transparent;
@@ -1311,7 +1312,6 @@ footer .wrapper {
   background-size: cover;
   transform: translateY(-50%);
   opacity: 0.3;
-  cursor: pointer;
 }
 
 .filter-list__item input:disabled ~ label::before {
