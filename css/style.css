@@ -72,7 +72,8 @@ body {
 .header-top .wrapper {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .logo {
@@ -334,7 +335,7 @@ body {
   color: #c2c7ce;
 }
 
-h1 {
+.header-middle h1 {
   width: 200px;
   margin: 0;
   margin-top: 4px;
@@ -487,45 +488,28 @@ h1 {
 .main-nav ul {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
-  padding: 0 22px;
+  padding: 0 23px;
   list-style: none;
   background-color: #32425c;
-}
-
-.main-nav ul::before,
-.main-nav ul::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  display: block;
-  width: 20px;
+  /*justify-content: space-between;*/
   border-bottom: 5px solid #293449;
-}
-
-.main-nav ul::before {
-  left: 0;
-}
-
-.main-nav ul::after {
-  right: 0;
 }
 
 .main-nav__item {
   flex-grow: 1;
-  text-align: center;
 }
 
 .main-nav__item a {
+  position: relative;
   display: block;
-  padding: 20px 0 20px 0;
+  padding: 20px 30px;
   font-size: 17px;
   line-height: 1;
   color: #ffffff;
   text-decoration: none;
-  border-bottom: 5px solid #293449;
 }
-
 
 .main-nav__item a:hover,
 .main-nav__item a:focus {
@@ -536,7 +520,16 @@ h1 {
 .main-nav__item a:active {
   color: #a8abaf;
   background-color: #1d2739;
-  border-bottom: 5px solid #1d2739;
+}
+
+.main-nav__item a:active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 5px;
+  background-color: #1d2739;
 }
 
 footer .wrapper {
@@ -800,6 +793,7 @@ footer .wrapper {
   margin-top: 0;
   margin-bottom: 20px;
   padding: 30px;
+  padding-right: 300px;
   font-weight: normal;
   font-size: 30px;
   line-height: 1;
@@ -1074,6 +1068,7 @@ footer .wrapper {
 .tools .main-header {
   margin: 0;
   background-color: #f2f6f8;
+  padding-right: 30px;
 }
 
 .cart-plus__text p {
@@ -1408,8 +1403,9 @@ footer .wrapper {
 }
 
 .filter__cost {
-  width: 75px;
-  padding: 8px 0 10px 20px;
+  box-sizing: border-box;
+  width: 95px;
+  padding: 8px 10px 10px 10px;
   font-weight: normal;
   font-size: 17px;
   line-height: 1;
@@ -1418,6 +1414,9 @@ footer .wrapper {
   background-color: #f7f3ec;
   border: 0;
   border-radius: 5px;
+  text-align: center;
+  -ms-text-align-last: center;
+  text-align-last: center;
 }
 
 .tool {
@@ -2066,7 +2065,7 @@ footer .wrapper {
 */
 .slide-list__item {
   height: 287px;
-  padding-right: 320px;
+  padding-right: 240px;
   background-repeat: no-repeat;
   background-position: 100% 50%;
   background-size: contain;
