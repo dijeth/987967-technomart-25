@@ -1311,6 +1311,7 @@ footer .wrapper {
   background-size: cover;
   transform: translateY(-50%);
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .filter-list__item input:disabled ~ label::before {
