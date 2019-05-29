@@ -107,21 +107,28 @@
       </section>
       <section class="tools__content">
         <h3 class="visually-hidden">Выбранные перфораторы</h3>
-        <p class="tools__sort sort-type tools__title" aria-label="Сортировка интсрументов"><span>Сортировка:</span>
-          <a class="sort-type__item sort-type__item--active">По цене</a>
-          <a class="sort-type__item" href="#">По типу</a>
-          <a class="sort-type__item" href="#">По функционалу</a>
-          <a class="sort-type__icon sort-type__item--active" href="#" aria-label="По возрастанию">
-            <svg width="11" height="11">
-              <polygon points="0,10 5.5,0 11,10"></polygon>
-            </svg>
-          </a>
-          <a class="sort-type__icon" href="#" aria-label="По убыванию">
-            <svg width="11" height="11">
-              <polygon points="0,0 11,0 5.5,10"></polygon>
-            </svg>
-          </a>
-        </p>
+        <div class="tools__sort sort-type tools__title" aria-label="Сортировка интсрументов">
+          <p>Сортировка:</p>
+          <ul class="sort-type__function">
+            <li class="sort-type__item sort-type__item--active"><a>По цене</a></li>
+            <li class="sort-type__item"><a href="#">По типу</a></li>
+            <li class="sort-type__item"><a href="#">По функционалу</a></li>
+          </ul>
+          <ul class="sort-type__direction">
+            <li class="sort-type__icon sort-type__item--active"><a href="#" aria-label="По возрастанию">
+                <svg width="11" height="11">
+                  <polygon points="0,10 5.5,0 11,10"></polygon>
+                </svg>
+              </a>
+            </li>
+            <li class="sort-type__icon"><a href="#" aria-label="По убыванию">
+                <svg width="11" height="11">
+                  <polygon points="0,0 11,0 5.5,10"></polygon>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
         <ul class="tool-list">
           <li class="tool-list__item tool">
             <a class="tool__button tool__button--buy" href="#">Купить</a>

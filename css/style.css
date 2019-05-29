@@ -1150,40 +1150,80 @@ footer .wrapper {
   display: flex;
 }
 
-.sort-type span {
-  margin-right: auto;
+.sort-type p {
+  margin: 0;
+  padding: 0;
+}
+
+.sort-type__function {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.sort-type__direction {
+  margin: 0;
+  margin-left: 25px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.sort-type__icon {
+  margin-left: 20px;
 }
 
 .sort-type__item {
-  margin-right: 26px;
-  margin-left: 40px;
+  margin-left: 68px;
 }
 
-.sort-type__item {
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 1;
-  font-family: "PTSans", Arial, sans-serif;
+.sort-type__item a {
   color: #c5c5c5;
-  text-transform: uppercase;
   text-decoration: none;
   border-bottom: 1px dotted #ee3643;
 }
 
-.sort-type__item:hover,
-.sort-type__item:focus {
+.sort-type__item a:active,
+.sort-type__item--active a:hover,
+.sort-type__item--active a:focus,
+.sort-type__item--active a {
+  color: #ee3643;
+  border-bottom: 0;
+  outline: none;
+}
+
+.sort-type__item a:hover,
+.sort-type__item a:focus {
   color: #000000;
   border-bottom-style: solid;
   outline: none;
 }
 
-.sort-type__item:active,
-.sort-type__item--active:hover,
-.sort-type__item--active:focus,
-.sort-type__item--active {
-  color: #ee3643;
-  border-bottom: 0;
+.sort-type__icon svg {
+  fill: #c5c5c5;
+}
+
+.sort-type__icon a:hover svg,
+.sort-type__icon a:focus svg {
   outline: none;
+
+  fill: #000000;
+}
+
+.sort-type__item--active a:hover svg,
+.sort-type__item--active a:focus svg {
+  outline: none;
+
+  fill: #ee3643;
+}
+
+.sort-type__item--active svg,
+.sort-type__icon a:active svg {
+  fill: #ee3643;
 }
 
 .sort-type__icon {
@@ -1194,32 +1234,9 @@ footer .wrapper {
   margin-left: 20px;
 }
 
-.sort-type__icon svg {
-  fill: #c5c5c5;
-}
-
-.sort-type__icon:hover svg,
-.sort-type__icon:focus svg {
-  outline: none;
-
-  fill: #000000;
-}
-
-.sort-type__item--active:hover svg,
-.sort-type__item--active:focus svg {
-  outline: none;
-
-  fill: #ee3643;
-}
-
-.sort-type__item--active svg,
-.sort-type__icon:active svg {
-  fill: #ee3643;
-}
-
 /* ::after нужен, чтоб победить глюк ie11, у которого ссылка не передает
    состояние :active вложенным в нее элементам */
-.sort-type__icon::after {
+.sort-type__icon a::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1562,10 +1579,10 @@ footer .wrapper {
   display: flex;
 }
 
-.tool:focus,
-.tool:hover/*,
+.tool:focus .tool__section,
+.tool:hover .tool__section,
 .tool__button:focus ~ .tool__section,
-.tool__button:hover ~ .tool__section*/ {
+.tool__button:hover ~ .tool__section {
   border-color: #ffffff;
   outline: none;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
