@@ -4,7 +4,7 @@
   font-family: "Cuprum";
 
   src: url("../fonts/cuprum.woff2") format("woff2"),
-  url("../fonts/cuprum.woff") format("woff");
+    url("../fonts/cuprum.woff") format("woff");
 }
 
 @font-face {
@@ -13,7 +13,7 @@
   font-family: "Cuprum";
 
   src: url("../fonts/cuprumitalic.woff2") format("woff2"),
-  url("../fonts/cuprumitalic.woff") format("woff");
+    url("../fonts/cuprumitalic.woff") format("woff");
 }
 
 @font-face {
@@ -21,7 +21,7 @@
   font-family: "Cuprum";
 
   src: url("../fonts/cuprumbold.woff2") format("woff2"),
-  url("../fonts/cuprumbold.woff") format("woff");
+    url("../fonts/cuprumbold.woff") format("woff");
 }
 
 @font-face {
@@ -30,7 +30,7 @@
   font-family: "PTSans";
 
   src: url("../fonts/ptsans.woff2") format("woff2"),
-  url("../fonts/ptsans.woff") format("woff");
+    url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
@@ -39,7 +39,7 @@
   font-family: "PTSans";
 
   src: url("../fonts/ptsansbold.woff2") format("woff2"),
-  url("../fonts/ptsansbold.woff") format("woff");
+    url("../fonts/ptsansbold.woff") format("woff");
 }
 
 body {
@@ -260,7 +260,7 @@ img {
   outline: none;
 }
 
-.search-text:focus ~ .button-search {
+.search-text:focus~.button-search {
   background-color: #ffffff;
   background-image: url(../img/sprite1.svg#search-red-view);
   opacity: 1;
@@ -279,11 +279,16 @@ img {
   /*width: 940px;*/
 }
 
+.user-menu__user,
+.user-menu__signin {
+  max-width: 310px;
+}
+
 .header-middle.user-menu--logout .user-menu__user {
   display: none;
 }
 
-.header-middle.user-menu--login .user-menu__signin {
+.user-menu--login .user-menu__signin {
   display: none;
 }
 
@@ -295,6 +300,7 @@ img {
   font-size: 14px;
   line-height: 30px;
   color: #32425c;
+  min-width: 269px;
 }
 
 .header-address span {
@@ -504,6 +510,7 @@ img {
 
 .main-nav__item {
   flex-grow: 1;
+  text-align: center;
 }
 
 .main-nav__item a {
@@ -1124,7 +1131,6 @@ footer .wrapper {
 
 .tools__catalog {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 11px;
 
@@ -1140,13 +1146,12 @@ footer .wrapper {
 }
 
 .tools__content {
-  width: 700px;
+  width: 720px;
 }
 
 .tool-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1154,10 +1159,16 @@ footer .wrapper {
 
 .tool-list__item {
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .sort-type {
   display: flex;
+}
+
+.sort-type.tools__title {
+  padding-bottom: 0;
+  margin-left: 20px;
 }
 
 .sort-type p {
@@ -1189,6 +1200,7 @@ footer .wrapper {
 
 .sort-type__item {
   margin-left: 68px;
+  margin-bottom: 12px;
 }
 
 .sort-type__item a {
@@ -1336,21 +1348,21 @@ footer .wrapper {
   opacity: 0.3;
 }
 
-.filter-list__item input:disabled ~ label::before {
+.filter-list__item input:disabled~label::before {
   opacity: 0.25;
 }
 
-.filter-list__item input:disabled ~ label {
+.filter-list__item input:disabled~label {
   opacity: 0.3;
 }
 
-.filter-list__item input:focus ~ label::before,
+.filter-list__item input:focus~label::before,
 .filter-list__item label:hover::before,
 .filter-list__item label:active::before {
   opacity: 0.39;
 }
 
-.filter-list__item input:checked ~ label::before {
+.filter-list__item input:checked~label::before {
   background-image: url(../img/sprite1.svg#checkbox-on-view);
 }
 
@@ -1358,7 +1370,7 @@ footer .wrapper {
   background-image: url(../img/sprite1.svg#radio-off-view);
 }
 
-.filter-list__item--power input:checked ~ label::before {
+.filter-list__item--power input:checked~label::before {
   background-image: url(../img/sprite1.svg#radio-on-view);
 }
 
@@ -1591,8 +1603,8 @@ footer .wrapper {
 
 .tool:focus .tool__section,
 .tool:hover .tool__section,
-.tool__button:focus ~ .tool__section,
-.tool__button:hover ~ .tool__section {
+.tool__button:focus~.tool__section,
+.tool__button:hover~.tool__section {
   border-color: #ffffff;
   outline: none;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
@@ -1603,8 +1615,8 @@ footer .wrapper {
   display: flex;
 }
 
-.tool__button:focus ~ .tool__section .tool__image,
-.tool__button:hover ~ .tool__section .tool__image,
+.tool__button:focus~.tool__section .tool__image,
+.tool__button:hover~.tool__section .tool__image,
 .tool:hover .tool__image,
 .tool:focus .tool__image {
   z-index: -10;
@@ -1655,7 +1667,7 @@ footer .wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 30px 0 40px;
+  margin: 30px 0 40px 20px;
   padding: 0;
   list-style: none;
 }

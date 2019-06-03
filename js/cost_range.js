@@ -5,6 +5,7 @@ function Bar(param) {
 Bar.prototype.init = function(param) {
   var min = document.querySelector(param.min),
     bar = min.parentElement,
+    main_parent = bar.parentElement,
     bar_rect = bar.getBoundingClientRect(),
     max = bar.querySelector(param.max),
     text_min = document.querySelector(param.text_min),
@@ -13,7 +14,8 @@ Bar.prototype.init = function(param) {
     min_cost = Number(param.bar_min),
     max_cost = Number(param.bar_max),
     fr = (max_cost - min_cost) / bar_rect.width,
-    self = this;
+    self = this,
+    focus = 'min_coord';
 
   min.ondragstart = function() { return false; };
   max.ondragstart = function() { return false; };
@@ -114,6 +116,32 @@ Bar.prototype.init = function(param) {
       document.onmousemove = null;
       document.onmouseup = null;
     };
+  });
+
+  min.addEventListener('keydown', function(e) {
+    switch (e.keyCode) {
+      case 39: self.min_value += 500 /*(max_cost - min_cost)/100*/; break;
+      case 37: self.min_value -= 500 /*(max_cost - min_cost)/100*/; break;
+    };
+  });
+
+  max.addEventListener('keydown', function(e) {
+    switch (e.keyCode) {
+      case 39: self.max_value += 500 /*(max_cost - min_cost)/100*/; break;
+      case 37: self.max_value -= 500 /*(max_cost - min_cost)/100*/; break;
+    };
+  });
+
+  min.addEventListener('focus', function(e) {
+    focus = 'min_coord';
+  });
+
+  max.addEventListener('focus', function(e) {
+    focus = 'max_coord';
+  });
+
+  main_parent.addEventListener('click', function(e) {
+    self[focus] = e.pageX;
   });
 
   this.min_value = text_min.value;
