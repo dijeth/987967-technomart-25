@@ -1018,7 +1018,7 @@ footer .wrapper {
   box-shadow: 0 0 16px 0 rgba(47, 42, 43, 0.5);
 }
 
-.map-popup img {
+.map-popup iframe {
   display: block;
 }
 
@@ -1638,6 +1638,7 @@ footer .wrapper {
   height: 170px;
   margin: 0;
   background-color: #ffffff;
+  transition: z-index 0.05s;
 }
 
 .tool__oldcost {
