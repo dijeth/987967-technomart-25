@@ -1638,7 +1638,7 @@ footer .wrapper {
   height: 170px;
   margin: 0;
   background-color: #ffffff;
-  transition: z-index 0.05s;
+  transition: z-index 0.5s;
 }
 
 .tool__oldcost {
