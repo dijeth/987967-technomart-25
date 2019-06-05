@@ -22,7 +22,9 @@ show_modal('.contacts__map a', 'modal--map');
 
 for (var is = document.getElementsByClassName('tool__button--buy'), maxi = is.length, i = 0; i < maxi; i++) {
   is[i].addEventListener('click', function(e) {
+
     e.preventDefault();
+    if (getComputedStyle(this.parentElement.querySelector('.tool__image')).opacity != 0) return;
 
     var cart = document.getElementsByClassName('button-cart')[0];
     cart.classList.add('button-cart--full');
@@ -34,6 +36,7 @@ for (var is = document.getElementsByClassName('tool__button--buy'), maxi = is.le
 for (var is = document.getElementsByClassName('tool__button--bookmark'), maxi = is.length, i = 0; i < maxi; i++) {
   is[i].addEventListener('click', function(e) {
     e.preventDefault();
+    if (getComputedStyle(this.parentElement.querySelector('.tool__image')).opacity != 0) return;
 
     var cart = document.getElementsByClassName('button-bookmarks')[0];
     cart.classList.add('button-cart--full');

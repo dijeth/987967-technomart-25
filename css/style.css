@@ -1,5 +1,4 @@
-@font-face {
-  font-style: normal;
+@font-face {font-style: normal;
   font-weight: 400;
   font-family: "Cuprum";
 
@@ -1610,7 +1609,8 @@ footer .wrapper {
 
 .tool:focus .tool__button,
 .tool:hover .tool__button {
-  display: block;
+  /*display: block;*/
+  /*opacity: 1;*/
 }
 
 .tool:focus .tool__section,
@@ -1624,7 +1624,8 @@ footer .wrapper {
 
 .tool__button:focus,
 .tool__button:hover {
-  display: block;
+  /*display: block;*/
+  /*opacity: 1;*/
 }
 
 .tool__button:focus ~ .tool__section .tool__image,
@@ -1632,6 +1633,7 @@ footer .wrapper {
 .tool:hover .tool__image,
 .tool:focus .tool__image {
   z-index: -10;
+  opacity: 0;
 }
 
 /*.tool__section:focus .tool__image,
@@ -1644,13 +1646,14 @@ footer .wrapper {
 
 .tool__image {
   z-index: 10;
+  opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 170px;
   margin: 0;
   background-color: #ffffff;
-  transition: z-index 0.5s;
+  transition: opacity 0.25s;
 }
 
 .tool__oldcost {
