@@ -1583,7 +1583,6 @@ footer .wrapper {
   position: absolute;
   top: 50%;
   left: 0;
-  display: block;
   width: 38px;
   height: 38px;
   background: transparent url(../img/sprite1.svg#cart-view) 50%/cover no-repeat;
@@ -1635,14 +1634,6 @@ footer .wrapper {
   z-index: -10;
   opacity: 0;
 }
-
-/*.tool__section:focus .tool__image,
-.tool__section:hover .tool__image,
-.tool__button:focus ~ .tool__section .tool__image,
-.tool__button:hover ~ .tool__section .tool__image {
-  z-index: -10;
-}
-*/
 
 .tool__image {
   z-index: 10;
@@ -2050,7 +2041,6 @@ footer .wrapper {
   position: absolute;
   top: -40px;
   right: 0;
-  display: block;
   width: 10px;
   height: 280px;
   background-image: url(../img/service-shadow.png);
