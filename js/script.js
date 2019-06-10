@@ -19,7 +19,9 @@ function click_modal(section, dialog) {
 
   section.addEventListener('click', function(e) {
     var rect = dialog.getBoundingClientRect();
-    if ((e.pageX < rect.left || e.pageX > rect.right) && (e.pageY < rect.top || e.pageY > rect.bottom)) this.classList.remove('modal--show');
+    console.log(rect);
+    console.log([e.pageX, e.pageY]);
+    if (!(e.pageX > rect.left && e.pageX < rect.right && e.pageY > rect.top + pageYOffset && e.pageY < rect.bottom + pageYOffset)) this.classList.remove('modal--show');
   });
 };
 
