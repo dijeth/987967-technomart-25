@@ -74,6 +74,7 @@ if ('ontouchstart' in document.documentElement) {
 
     is[i].addEventListener('click', function(e) {
       if (e.target.classList.contains('tool__button')) return;
+      setPEStyleToBtn();
 
       this.querySelectorAll('.tool__button').forEach(function(b) {
         b.style.pointerEvents = 'auto';
