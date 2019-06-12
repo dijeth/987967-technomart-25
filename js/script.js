@@ -14,8 +14,10 @@ function show_modal(selector_a, class_modal) {
 };
 
 function click_modal(section, dialog) {
-  var section = document.querySelector(section),
-    dialog = section.querySelector(dialog);
+  var section = document.querySelector(section);
+  if (! section) return;
+
+  var dialog = section.querySelector(dialog);
 
   section.addEventListener('click', function(e) {
     var rect = dialog.getBoundingClientRect();
