@@ -1632,7 +1632,7 @@ footer .wrapper {
 .tool:hover .tool__image,
 .tool:focus .tool__image {
   z-index: -10;
-  opacity: 0;
+  /*opacity: 0;*/
 }
 
 .tool__image {
@@ -1644,7 +1644,7 @@ footer .wrapper {
   height: 170px;
   margin: 0;
   background-color: #ffffff;
-  transition: opacity 0.25s;
+  /*transition: opacity 0.25s;*/
 }
 
 .tool__oldcost {
