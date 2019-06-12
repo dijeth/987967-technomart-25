@@ -48,7 +48,9 @@ click_modal('.modal--cart-plus', '.dialog');
 click_modal('.modal--map', '.map-popup');
 click_modal('.modal--write-us', '.dialog');
 
-
+// Код ниже обрабатывает клик по кнопкам "Купить" и "В закладки",
+// предотвращая на сенсорном экране ситуацию ложного срабатывания кнопок, когда клик по картинке
+// в карточке товара передается кнопке, которая в момент клика была скрыта.
 
 if ('ontouchstart' in document.documentElement) {
   function setPEStyleToBtn() {
@@ -60,20 +62,21 @@ if ('ontouchstart' in document.documentElement) {
   for (var is = document.querySelectorAll('.tool'), maxi = is.length, i = 0; i < maxi; i++) {
     is[i].querySelectorAll('.tool__button').forEach(function(b) {
       b.style.pointerEvents = 'none';
-      b.addEventListener('click', function (e) {console.log(b.style.pointerEvents)
+      b.addEventListener('click', function (e) {
         e.preventDefault();
 
-        b.style.pointerEvents = 'none';console.log(b.style.pointerEvents)
+        this.style.pointerEvents = 'none';
 
-        var cart = (b.classList.contains('tool__button--buy') ? document.querySelector('.button-cart') : document.querySelector('.button-bookmarks'));
+        var cart = (this.classList.contains('tool__button--buy') ? document.querySelector('.button-cart') : document.querySelector('.button-bookmarks'));
         cart.classList.add('button-cart--full');
         cart.innerText = cart.innerText.replace(/(\d+)/, function(a) { return Number(a) + 1 });
-        if (b.classList.contains('tool__button--buy')) document.getElementsByClassName('modal--cart-plus')[0].classList.add('modal--show');
+        if (this.classList.contains('tool__button--buy')) document.getElementsByClassName('modal--cart-plus')[0].classList.add('modal--show');
       });
     });
 
     is[i].addEventListener('click', function(e) {
-      setPEStyleToBtn();
+      if (e.target.classList.contains('tool__button')) return;
+
       this.querySelectorAll('.tool__button').forEach(function(b) {
         b.style.pointerEvents = 'auto';
       });
