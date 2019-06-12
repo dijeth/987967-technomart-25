@@ -42,8 +42,8 @@ Slider.prototype.init = function(param) {
     button_next = param.button_next && document.getElementsByClassName(param.button_next)[0],
     dot_list = param.dot_list && document.getElementsByClassName(param.dot_list)[0],
     active_dot = param.active_dot,
-    disable_action = param.disable_action;
-  item_rect = slider.getBoundingClientRect(),
+    disable_action = param.disable_action,
+    item_rect = slider.getBoundingClientRect(),
     slider_rect = slider_list.getBoundingClientRect(),
     item_count = Math.round(slider_rect.height / item_rect.height),
     item_current = Math.round((item_rect.top - slider_rect.top) / item_rect.height),
@@ -54,6 +54,7 @@ Slider.prototype.init = function(param) {
   if (button_prev) button_prev.addEventListener('click', (function(obj) { return function() { obj.go('prev') } })(self));
   if (button_next) button_next.addEventListener('click', (function(obj) { return function() { obj.go('next') } })(self));
 
+  this.disable_action = disable_action;
   if (disable_action) {
     this.set_action(slider_list, false);
     this.set_action(slider_list.children[item_current], true);
@@ -67,7 +68,6 @@ Slider.prototype.init = function(param) {
   this.dot_list = dot_list;
   this.slider = slider_list;
   this.active_dot_class = active_dot;
-  this.disable_action = disable_action;
 };
 
 Slider.prototype.go = function(slide) { // slide = 'next', 'prev' или число начиная с 0
