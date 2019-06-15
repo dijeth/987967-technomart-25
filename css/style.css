@@ -527,6 +527,7 @@ img {
   text-decoration: none;
 }
 
+.main-nav__item a:not([href]),
 .main-nav__item a:hover,
 .main-nav__item a:focus {
   background-color: #293449;
