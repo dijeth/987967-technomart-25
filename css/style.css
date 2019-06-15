@@ -1229,8 +1229,8 @@ footer .wrapper {
   outline: none;
 }
 
-.sort-type__item a:hover,
-.sort-type__item a:focus {
+.sort-type__item a[href]:hover,
+.sort-type__item a[href]:focus {
   color: #000000;
   border-bottom-style: solid;
   outline: none;
@@ -1240,22 +1240,16 @@ footer .wrapper {
   fill: #c5c5c5;
 }
 
-.sort-type__icon a:hover svg,
-.sort-type__icon a:focus svg {
+.sort-type__button[href]:hover svg,
+.sort-type__button[href]:focus svg {
   outline: none;
 
   fill: #000000;
 }
 
-.sort-type__item--active a:hover svg,
-.sort-type__item--active a:focus svg {
+.sort-type__item--active svg {
   outline: none;
 
-  fill: #ee3643;
-}
-
-.sort-type__item--active svg,
-.sort-type__icon a:active svg {
   fill: #ee3643;
 }
 
