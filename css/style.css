@@ -623,7 +623,7 @@ footer .wrapper {
 }
 
 .footer-address {
-  min-width: 340px;
+  max-width: 340px;
   margin: 0;
   margin-right: auto;
   padding-left: 3px;
@@ -635,6 +635,8 @@ footer .wrapper {
 .footer-address a {
   color: inherit;
   text-decoration: none;
+  display: inline-block;
+  width: 100%;
 }
 
 .footer-address a:hover,
@@ -653,7 +655,7 @@ footer .wrapper {
 }
 
 .footer-copyright {
-  min-width: 255px;
+  max-width: 255px;
 }
 
 /*.footer-contacts {
@@ -667,6 +669,8 @@ footer .wrapper {
 .footer-text a {
   color: #ffd180;
   text-decoration: none;
+  display: block;
+  width: 100%;
 }
 
 .footer-text a:hover,
@@ -1492,6 +1496,11 @@ footer .wrapper {
   text-align: center;
 }
 
+.tool__model {
+  display: inline-block;
+  width: 100%;
+}
+
 .tool__cost {
   position: relative;
   display: block;
@@ -2023,6 +2032,7 @@ footer .wrapper {
 .service .main-text {
   width: 100%;
   margin-bottom: 26px;
+  padding-right: 56%;
 }
 
 .service__controls {
