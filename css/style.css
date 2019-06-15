@@ -230,7 +230,7 @@ img {
 }
 
 .button-search {
-  width: 50px;
+  width: 48px;
   height: 42px;
   margin: 0;
   padding: 0;
@@ -424,7 +424,8 @@ img {
 }
 
 .button-user {
-  padding-left: 43px;
+  padding-left: 45px;
+  padding-right: 17px;
 }
 
 .button-user:hover,
@@ -664,6 +665,7 @@ footer .wrapper {
 */
 .footer-develop {
   margin-left: 50px;
+  margin-right: 13px;
 }
 
 .footer-text a {
@@ -687,7 +689,8 @@ footer .wrapper {
 .socials {
   flex-grow: 1;
   margin: 0;
-  /*margin-left: auto;*/
+  margin-left: 14px;
+  margin-top: -2px;
   padding: 0 10px;
   list-style: none;
   line-height: 41px;
