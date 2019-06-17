@@ -10,6 +10,8 @@
     disable_action  класс кнопок или ссылок внутри слайдов,
                     которые надо дизаблить, чтоб не происходил
                     их выбор по табу, когда слайд скрыт
+
+    change_by_class
   }
 */
 
@@ -78,6 +80,7 @@ Slider.prototype.init = function(param) {
   this.active_dot_class = active_dot;
   this.tops = tops;
   this.heights = heights;
+  this.change_by_class = param.change_by_class;
 
   this.go(0);
 };
@@ -111,9 +114,13 @@ Slider.prototype.go = function(slide) { // slide = 'next', 'prev' или чис�
     else this.button_next.removeAttribute('disabled');
   };
 
-  this.slider.style.transform = 'translateY(' + this.tops[this.item_current] + 'px)';
-
-  this.slider.parentElement.style.height = this.heights[this.item_current]+'px';
+  if (this.change_by_class) {
+    this.slider.children[old].classList.remove(this.change_by_class);
+    this.slider.children[this.item_current].classList.add(this.change_by_class);
+  } else {
+    this.slider.style.transform = 'translateY(' + this.tops[this.item_current] + 'px)';
+    this.slider.parentElement.style.height = this.heights[this.item_current] + 'px';
+  }
 
   if (this.dot_list) {
     this.dot_list.children[old].classList.remove(this.active_dot_class);
@@ -146,5 +153,6 @@ var service_slider = new Slider({
   slider_list: 'slide-list',
   dot_list: 'service-list',
   active_dot: 'service-list__item--active',
-  disable_action: 'button-send'
+  disable_action: 'button-send',
+  change_by_class: 'slide-list__item--active'
 });

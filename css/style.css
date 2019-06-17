@@ -2096,7 +2096,7 @@ footer .wrapper {
 
 .service__slider {
   width: 620px;
-  height: 287px;
+  min-height: 287px;
   margin: 0;
   margin-top: 42px;
   padding: 0;
@@ -2165,6 +2165,7 @@ footer .wrapper {
 .slide-list__item::after {
   content: "";
   display: table;
+  margin-top: 20px;
 /*  height: 10px;
   width: 10px;
   background-color: #f00;
@@ -2176,6 +2177,11 @@ footer .wrapper {
   background-repeat: no-repeat;
   background-position: 100% 50%;
   background-size: contain;
+  display: none;
+}
+
+.slide-list__item--active {
+  display: block;
 }
 
 .slide-list__item--delivery {
