@@ -45,9 +45,17 @@ Slider.prototype.init = function(param) {
     disable_action = param.disable_action,
     item_rect = slider.getBoundingClientRect(),
     slider_rect = slider_list.getBoundingClientRect(),
-    item_count = Math.round(slider_rect.height / item_rect.height),
-    item_current = Math.round((item_rect.top - slider_rect.top) / item_rect.height),
-    self = this;
+    item_count = slider_list.children.length,
+    item_current = 0,
+    self = this,
+    tops = [],
+    heights = [],
+    h = slider_list.offsetTop;
+
+  for (var i = 0; i < slider_list.children.length; i++) {
+    tops.push(h - slider_list.children[i].offsetTop);
+    heights.push(slider_list.children[i].offsetHeight);
+  };
 
   if (dot_list) init_dots();
 
@@ -64,10 +72,14 @@ Slider.prototype.init = function(param) {
   this.button_prev = button_prev;
   this.button_next = button_next;
   this.item_count = item_count;
-  this.height_prc = 100 / item_count;
+  // this.height_prc = 100 / item_count;
   this.dot_list = dot_list;
   this.slider = slider_list;
   this.active_dot_class = active_dot;
+  this.tops = tops;
+  this.heights = heights;
+
+  this.go(0);
 };
 
 Slider.prototype.go = function(slide) { // slide = 'next', 'prev' или число начиная с 0
@@ -99,7 +111,9 @@ Slider.prototype.go = function(slide) { // slide = 'next', 'prev' или чис�
     else this.button_next.removeAttribute('disabled');
   };
 
-  this.slider.style.transform = 'translateY(-' + (this.item_current * this.height_prc) + '%)';
+  this.slider.style.transform = 'translateY(' + this.tops[this.item_current] + 'px)';
+
+  this.slider.parentElement.style.height = this.heights[this.item_current]+'px';
 
   if (this.dot_list) {
     this.dot_list.children[old].classList.remove(this.active_dot_class);
