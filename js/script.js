@@ -2,6 +2,7 @@ function closer() {
   var elem = this;
   while (!elem.parentElement.classList.contains('modal--show')) elem = elem.parentElement;
   elem.parentElement.classList.remove('modal--show');
+  // elem.parentElement.classList.add('modal--hide');
 };
 
 function show_modal(selector_a, class_modal) {
