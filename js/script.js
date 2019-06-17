@@ -61,7 +61,7 @@ if ('ontouchstart' in document.documentElement) {
   for (var is = document.querySelectorAll('.tool'), maxi = is.length, i = 0; i < maxi; i++) {
     is[i].querySelectorAll('.tool__button').forEach(function(b) {
       b.style.pointerEvents = 'none';
-      b.addEventListener('click', function (e) {
+      b.addEventListener('click', function(e) {
         e.preventDefault();
 
         this.style.pointerEvents = 'none';
@@ -104,3 +104,48 @@ if ('ontouchstart' in document.documentElement) {
     });
   };
 }
+
+
+// Дополниткльная анимация формы
+var form = document.querySelector('.write-us'),
+  user_name = form.querySelector('[name=user-name]'),
+  email = form.querySelector('[name=email]'),
+  text = form.querySelector('[name=text]'),
+  isStorage = true;
+
+try {
+  user_name.value = localStorage.getItem('user_name');
+  text.value = localStorage.getItem('text');
+  email.value = localStorage.getItem('email');
+} catch (e) {
+  user_name.value = '';
+  text.value = '';
+  email.value = '';
+  isStorage = false;
+};
+
+document.querySelector('.contacts .main-button').addEventListener('click', function() {
+  form.classList.remove('error');
+  if (user_name.value === '') user_name.focus()
+  else if (email === '') email.focus()
+  else text.focus();
+});
+
+form.addEventListener('submit', function(e) {
+  if (text.value == '' || !/@/.test(email.value)) {
+    e.preventDefault();
+    form.classList.remove('error');
+    form.offsetWidth = form.offsetWidth;
+    form.classList.add('error');
+  };
+
+  if (isStorage) {
+    localStorage.setItem('user_name', user_name.value);
+    localStorage.setItem('text', text.value);
+    localStorage.setItem('email', email.value);
+  }
+});
+
+// form.querySelector('.role-close').addEventListener('click', function(e) {
+//   form.classList.remove('error');
+// });

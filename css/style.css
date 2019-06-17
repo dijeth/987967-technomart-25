@@ -44,15 +44,37 @@
 
 @keyframes slidein {
   from {
-    width: 0;
+    transform: translateX(100%);
   }
 
   55% {
-    width: 110%;
+    transform: translateX(-5%);
   }
 
   to {
-    width: calc(100% - 40px);
+    transform: translateX(0);
+  }
+}
+
+@keyframes form_error {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(-10deg);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate(10deg);
   }
 }
 
@@ -1520,7 +1542,7 @@ footer .wrapper {
   display: block;
   box-sizing: border-box;
   width: 122px;
-  margin-right: 20px;
+  margin-right: 11px;
   padding: 11px 0 11px 20px;
   font-weight: bold;
   font-size: 17px;
@@ -2170,7 +2192,7 @@ footer .wrapper {
   display: none;
   justify-content: center;
   align-items: center;
-  /*width: calc(100% - 40px);*/
+  width: calc(100% - 40px);
   height: 100vh;
   padding: 20px;
   overflow: hidden;
@@ -2178,7 +2200,7 @@ footer .wrapper {
 
 .modal--show {
   display: flex;
-  animation: 1s 1 normal slidein forwards;
+  animation: slidein 1s 1 normal;
 }
 
 .modal--map img {
@@ -2188,4 +2210,8 @@ footer .wrapper {
   z-index: -1;
   width: 940px;
   height: 446px;
+}
+
+.error {
+  animation: form_error 0.7s 1 normal forwards;
 }
