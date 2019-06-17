@@ -673,6 +673,7 @@ footer .wrapper {
 
 .footer-address a {
   display: inline-block;
+  vertical-align: top;
   width: 100%;
   color: inherit;
   text-decoration: none;
@@ -1534,6 +1535,7 @@ footer .wrapper {
 
 .tool__model {
   display: inline-block;
+  vertical-align: top;
   width: 100%;
 }
 
@@ -1999,22 +2001,27 @@ footer .wrapper {
 
 .slide1 {
   background-image: url(../img/promo-perforator.jpg);
+  background-color: #67574a;
 }
 
 .slide2 {
   background-image: url(../img/promo-drill.jpg);
+  background-color: #472f2b;
 }
 
 .slide3 {
   background-image: url(../img/promo-3.jpg);
+  background-color: #263731;
 }
 
 .slide4 {
   background-image: url(../img/promo-4.jpg);
+  background-color: #38241b;
 }
 
 .slide5 {
   background-image: url(../img/promo-5.jpg);
+  background-color: #e6e1de;
 }
 
 .slider__item h3 {
