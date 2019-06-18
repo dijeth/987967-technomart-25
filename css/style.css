@@ -2055,6 +2055,8 @@ footer .wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  width: 950px;
+  padding: 0 0 0 10px;
 }
 
 .service h2 {
@@ -2095,7 +2097,7 @@ footer .wrapper {
 }
 
 .service__slider {
-  width: 620px;
+  width: 630px;
   min-height: 287px;
   margin: 0;
   margin-top: 42px;
@@ -2166,17 +2168,16 @@ footer .wrapper {
   content: "";
   display: table;
   margin-top: 20px;
-/*  height: 10px;
-  width: 10px;
-  background-color: #f00;
-*/}
+}
 
 .slide-list__item {
+  position: relative;
   min-height: 287px;
   padding-right: 240px;
   background-repeat: no-repeat;
-  background-position: 100% 50%;
-  background-size: contain;
+  background-position: 100% 0;
+  background-color: #f4f8fa;
+  /*background-size: contain;*/
   display: none;
 }
 
@@ -2186,13 +2187,11 @@ footer .wrapper {
 
 .slide-list__item--delivery {
   background-image: url(../img/delivery.jpg);
-  background-position: 100% 24px;
-  background-size: 76%;
+  background-position: 94% 24px;
 }
 
 .slide-list__item--warranty {
   background-image: url(../img/warranty.jpg);
-  background-position-x: 105%;
 }
 
 .slide-list__item--credit {
